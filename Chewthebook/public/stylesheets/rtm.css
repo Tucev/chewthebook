@@ -1,0 +1,23 @@
+/* Simplified Chinese Homepage */
+
+/* Header */
+
+#topnav-logo, #conttbl1 img { width: 211px; height: 86px; }
+
+/* Buttons */
+
+.gobtn { width: 45px; }
+.mfbtn_tod { width: 50px; }
+.mfbtn_tom { width: 50px; }
+.mfbtn_tw { width: 50px; }
+.mfbtn_for { width: 50px; }
+
+/* Font Size */
+
+input,select,textarea { font-size: 13px; }
+body { font-size: 13px; }
+
+#searchmapoptions { font-size: 11px; }
+#locationsmanage { font-size: 11px; }
+.iw_rbcontent { font-size: 11px; }
+.iw_tasks * { font-size: 11px; }
