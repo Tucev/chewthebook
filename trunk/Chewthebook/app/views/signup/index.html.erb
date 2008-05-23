@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>吃书网 - 在线协同翻译平台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!-- link rel="shortcut icon" href="http://www.rememberthemilk.com/favicon.ico" --><!-- XXX: Add static -->
+<link rel="stylesheet" href="../stylesheets/rtm_002.css" type="text/css" />
+<link rel="stylesheet" href="../stylesheets/homepage.css" type="text/css" /><!-- XXX: Add static -->
+<link rel="stylesheet" href="../stylesheets/rtm.css" type="text/css" />
+
+<script type="text/javascript"><!--
+
+
+//if(document.location.hostname==='chewthebook.com')
+//{document.location.href=document.location.href.replace('chewthebook.com','www.chewthebook.com');}
+document.onkeypress=function(ev)
+{ev||(ev=window.event);var pressed=(ev.charCode)?ev.charCode:((ev.which)?ev.which:ev.keyCode);if((ev.ctrlKey&&ev.shiftKey&&(pressed==12||pressed==108||pressed==(108-32)||pressed==(108-22)))||ev.shiftKey&&pressed==34)
+{document.location='/login/';}
+return true;}
+//var signup={'init':function(){window.onload=function(){var link=document.getElementById('hp-signup-lnk');link.onclick=function(){window.location='/signup/';};};}};signup.init();
+
+--></script>
+<style type="text/css">
+
+/* Signup tabs */
+
+#signuptab {
+  float:left;
+  width:100%;
+  background:#fff url("http://localhost:3000/images/bg.gif") repeat-x bottom;
+  font-size: 1.0em;
+  line-height: normal;
+}
+#signuptab ul {
+  margin:0;
+  padding: 0px 10px 0px 10px;
+  list-style:none;
+}
+#signuptab li {
+  float:left;
+  background:url("http://localhost:3000/images/left_white.png") no-repeat left top;
+  margin:0;
+  padding:0 3px 0 9px;
+  border-bottom:1px solid #CACACA;
+}
+#signuptab a {
+  float:left;
+  display:block;
+  width:.1em;
+  background:url("http://localhost:3000/images/right_white.png") no-repeat right top;
+  padding:2px 15px 0px 6px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#fff;
+  white-space: nowrap;
+}
+#signuptab > ul a {width:auto;}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#signuptab a {float:none;}
+/* End IE5-Mac hack */
+#signuptab a:hover {
+  color:#333;
+}
+#signuptab #signupcurrent {
+  background-position:0 -150px;
+  border-width:0;
+}
+#signuptab #signupcurrent a {
+  background-position:100% -150px;
+  padding-bottom:1px;
+  color:#000;
+}
+#signuptab li:hover, #signuptab li:hover a {
+  background-position:0% -150px;
+  color:#000;
+}
+#signuptab li:hover a {
+  background-position:100% -150px;
+}
+
+/* Signup box */
+
+#signupbox {
+  width: 100%;
+  text-align: center;
+  margin: 0em auto;
+}
+
+#signupwrap {
+  border: 2px solid #CBDCED;
+  text-align: left;
+  padding: 30px 10px 20px 30px;
+  clear: both;
+}
+
+/* Unsupported browsers */
+
+.orange_rbcontent { padding: 0.4em; }
+.orange_rbroundbox { width: 100%; }
+
+#unsupported {
+  font-weight: bold;
+  text-align: left;
+}
+
+/*#content {
+  padding-top: 15px;
+}*/
+
+/* Signup form */
+
+#signupform table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+  empty-cells: show;
+}
+
+#signupform .label {
+  padding-top: 2px;
+  padding-right: 8px;
+  vertical-align: top;
+  text-align: right;
+  width: 125px;
+  white-space: nowrap;
+}
+
+#signupform .field {
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+
+#signupform .status {
+  padding-top: 2px;
+  padding-left: 8px;
+  vertical-align: top;
+  width: 246px;
+  white-space: nowrap;
+}
+
+#signupform .textfield {
+  width: 170px;
+}
+
+#signupform .error {
+  background:url("http://localhost:3000/images/ico/ico_cross_org.gif") no-repeat 0px 0px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+#signupform .error_msg {
+  font-weight: bold;
+  color: #EA5200;
+  margin-left: 19px;
+}
+
+#signupform .success {
+  background:url("http://localhost:3000/images/ico/ico_check_blu.gif") no-repeat 0px 0px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+#signupform .success_msg {
+  font-weight: bold;
+  color: #0060BF;
+  margin-left: 19px;
+}
+
+#signupform #dateformatStatus, #signupform #termsStatus {
+  margin-left: 6px;
+}
+
+#signupform #dateformat_eu {
+ vertical-align: middle;
+}
+
+#signupform #ldateformat_eu {
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+#signupform #dateformat_am {
+  vertical-align: middle;
+}
+
+#signupform #ldateformat_am {
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+#signupform #termswrap {
+  float: left;
+}
+
+#signupform #terms {
+  vertical-align: middle;
+  float: left;
+  display: block;
+  margin-right: 5px;
+}
+
+#signupform #lterms {
+  font-weight: normal;
+  vertical-align: middle;
+  float: left;
+  display: block;
+  width: 350px;
+  white-space: normal;
+}
+
+#signupform #lsignupsubmit {
+  visibility: hidden;
+}
+
+</style>
+</head>
+<body>
+<div id="topbar">
+<div class="content"><span class="login">
+          已经是会员？<a class="login-link" href="/login/">请登录</a>。      </span>
+
+<table class="tbl-container">
+<tbody>
+<tr>
+<td><span class="welcome"><strong>欢迎使用！</strong></span>&nbsp;</td>
+</tr>
+</tbody></table></div></div> <!-- /topbar -->
+<div id="topnav">
+<div class="logo"><a href="/"><img src="../images/logo.png" alt="Chew The Book" id="topnav-logo" /></a></div>
+<div class="content">
+<ul>
+<li class="top-nav-home"><a href="/">首页</a></li>
+<li class="top-nav-learn-more"><a href="/tour/">教程</a></li>
+<li class="top-nav-signup"><a href="/signup/">注册</a></li>
+<li class="top-nav-blog"><a href="http://blog.chewthebook.com/">博客</a></li>
+<li class="top-nav-help"><a href="/help/">帮助</a></li></ul></div></div> <!-- /topnav -->
+
+
+<div id="pageheader">
+  <div class="content">
+    <h1>Signup</h1>
+  </div>
+</div> <!-- /pageheader -->
+
+<div id="container">
+  <div class="content">
+  
+    <div id="signupbox">
+
+      <!--br /-->
+            <!--div id="signuptab">
+        <ul>
+          <li id="signupcurrent"><a href=" ">注册</a></li>
+        </ul>
+      </div--> <!-- /signuptab -->
+      <div id="signupwrap">
+      		<form id="signupform" autocomplete="off" method="post" action="https://www.rememberthemilk.com/signup/">
+	  		  <table>
+	  		  <tr>
+	  		  	<td class="label"><label id="lfirstname" for="firstname">名字</label></td>
+	  		  	<td class="field"><input id="firstname" name="firstname" type="text" class="textfield" value="" maxlength="100" /></td>
+
+	  		  	<td class="status"><span id="firstnameStatus" ></span></td>
+	  		  </tr>
+	  		  <tr>
+	  			<td class="label"><label id="llastname" for="lastname">姓氏</label></td>
+	  			<td class="field"><input id="lastname" name="lastname" type="text" class="textfield" value="" maxlength="100" /></td>
+	  			<td class="status"><span id="lastnameStatus" ></span></td>
+	  		  </tr>
+	  		  <tr>
+
+	  			<td class="label"><label id="lusername" for="username">用户名称</label></td>
+	  			<td class="field"><input id="username" name="username" type="text" class="textfield" value="" maxlength="50" /></td>
+	  			<td class="status"><span id="usernameStatus" ></span></td>
+	  		  </tr>
+	  		  <tr>
+	  			<td class="label"><label id="lpassword" for="password">用户密码</label></td>
+	  			<td class="field"><input id="password" name="password" type="password" class="textfield" maxlength="50" value="" /></td>
+	  			<td class="status"><span id="firstPasswordStatus" ></span></td>
+
+	  		  </tr>
+	  		  <tr>
+	  			<td class="label"><label id="lpassword_confirm" for="password_confirm">确认密码</label></td>
+	  			<td class="field"><input id="password_confirm" name="password_confirm" type="password" class="textfield" maxlength="50" value="" /></td>
+	  			<td class="status"><span id="passwordStatus" ></span></td>
+	  		  </tr>
+	  		  <tr>
+	  			<td class="label"><label id="lemail" for="email">电子邮件</label></td>
+
+	  			<td class="field"><input id="email" name="email" type="text" value="" class="textfield" maxlength="150" /></td>
+	  			<td class="status"><span id="emailStatus" ></span></td>
+	  		  </tr>
+              	  		  <tr>
+	  			<td class="label"><label>哪个更不错</label></td>
+	  			<td class="field" colspan="2" style="vertical-align: top; padding-top: 2px;">
+	  			<table>
+	  			<tbody>
+
+	  			<tr>
+	  				<td style="padding-right: 5px;">
+	  				<input id="dateformat_eu" name="dateformat" type="radio" value="0"  />
+		            <label id="ldateformat_eu" for="dateformat_eu">14/02/07</label>
+	  				</td>
+	  				<td style="padding-left: 5px;">
+	  				<input id="dateformat_am" name="dateformat" type="radio" value="1"  />
+		            <label id="ldateformat_am" for="dateformat_am">02/14/07</label>
+
+	  				</td>
+	  				<td>
+	  				<span id="dateformatStatus" ></span>
+	  				</td>
+	  			</tr>
+	  			</tbody>
+	  			</table>
+	  			</td>
+	  		  </tr>
+
+	  		  <tr>
+	  			<td class="label">&nbsp;</td>
+	  			<td class="field" colspan="2">
+	  			<div id="termswrap">
+	  			<input id="terms" type="checkbox" name="terms"  />
+	            <label id="lterms" for="terms">我已经阅读并接受<a onclick="window.open('/help/terms.rtm','TOS','status=yes,scrollbars=yes,resizable=yes,width=800,height=480'); return false;" href="/help/terms.rtm">使用条款</a>。<span id="termsStatus" ></span></label>
+	            </div> <!-- /termswrap -->
+
+	  			</td>
+	  		  </tr>
+	  		  <tr>
+	  			<td class="label"><label id="lsignupsubmit" for="signupsubmit">注册</label></td>
+	  			<td class="field" colspan="2">
+	            <input id="signupsubmit" name="signup" type="submit" value="注册" />
+	  			</td>
+	  		  </tr>
+
+	  		  </table>
+                    <input type="hidden" name="language" id="language" value="zh-CN" />
+                  </form>
+      </div> <!-- /signupwrap -->
+    </div> <!-- /signupbox -->
+    <script type="text/javascript"><!--
+    var emailInUse = null;
+    var errorField = null;
+    if (errorField !== null)
+    {
+        document.getElementById(errorField).focus();
+    }
+ --></script>
+  </div>
+
+</div> <!-- /container-->
+
+<div id="footer">
+
+<div id="footer-content">
+<ul id="footer-nav">
+<li class="footer-nav-accounts"><a href="http://chewthebook.com/signup/">帐户</a>
+<ul>
+<li><a href="http://chewthebook.com/signup/">注册</a></li>
+<li><a href="http://chewthebook.com/login/">登录</a></li>
+<li><a href="http://chewthebook.com/tour/">教程</a></li>
+<li><a href="http://chewthebook.com/upgrade/">升级</a></li></ul></li>
+<li class="footer-nav-about"><a href="http://chewthebook.com/about/">关于</a>
+<ul>
+<li><a href="http://chewthebook.com/about/press.rtm">媒体</a></li>
+
+<li><a href="http://chewthebook.com/about/contact.rtm">联系我们</a></li></ul></li>
+<li class="footer-nav-blog"><a href="http://chewthebook.blogspot.com/">博客</a>
+<ul>
+<li><a href="http://blog.chethebook.com/">简体中文</a></li></ul></li>
+<li class="footer-nav-services"><a href="http://chewthebook.com/services/">服务</a>
+<ul>
+<li><a href="http://chewthebook.com/services/api/">API</a></li>
+<li><a href="http://chewthebook.com/services/mobile/">移动</a></li>
+<li><a href="http://chewthebook.com/services/googlegears/">离线访问</a></li>
+<li><a href="http://chewthebook.com/services/tester/">Tester Program</a></li>
+</ul>
+<li class="footer-nav-forums"><a href="http://chewthebook.com/forums/">论坛</a>
+    <ul>
+        <li><a href="http://chewthebook.com/forums/help/">帮助</a></li>
+        <li><a href="http://chewthebook.com/forums/ideas/">想法</a></li>
+        <li><a href="http://chewthebook.com/forums/tips/">Tips &amp; Tricks</a></li>
+    </ul>
+</li>
+<li class="footer-nav-help"><a href="http://chewthebook.com/help/">帮助</a>
+
+<ul>
+<li><a href="http://chewthebook.com/help/guide/">入门指南</a></li>
+<li><a href="http://chewthebook.com/help/faq/">常见问题</a></li></ul></li></ul>
+<div id="footer-legal"><span style="float: right"><a href="http://chewthebook.com/help/terms.html">使用条款</a> | <a href="http://chewthebook.com/help/privacy.html">隐私政策</a></span>
+      © 2008 Chew The Book</div> <!-- /footer-legal --></div> <!-- /footer-content --></div> <!-- /footer -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+
+</script>
+<script type="text/javascript">
+_uacct = "UA-4359932-1";
+urchinTracker();
+</script>
+</body>
+</html>
+
