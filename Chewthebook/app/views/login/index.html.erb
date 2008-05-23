@@ -44,33 +44,61 @@ return true;}
 
 <div id="pageheader">
   <div class="content">
-    <h1>Help</h1>
-
+    <h1>登录</h1>
   </div>
 </div> <!-- /pageheader -->
 
 <div id="container">
   <div class="content">
+
   
-<div class="feature-box">
-<h3>New to Chew The Book?</h3>
-<p>The <a href="/help/guide/"><b>Getting Started</b></a> guide has everything you need to know.</p>
+<div class="contentbox">
 
-</div>
+	
+	<!--div class="navtabs"><ul><li class="navtab_current"><a href="#"><span>登录</span></a></li></ul></div-->
+	<div class="contentboxwrap">
+	
+        <form id="loginform" method="post" action="https://www.rememberthemilk.com/auth.rtm">
+        <table>
+		<tr>
+			<td class="label"><label id="lUsername" for="username">用户名称</label></td>
+			<td class="field"><input id="username" name="username" type="text" class="textfield" style="width: 18.5em;" /></td>
 
-<h1>Looking for help?</h1>
+			<td class="status"><span id="usernameStatus"></span></td>
+		</tr>
+		<tr>
+			<td class="label"><label id="lPassword" for="password">用户密码</label></td>
+			<td class="field"><input id="password" name="password" type="password" class="textfield" style="width: 18.5em;" /></td>
+			<td class="status"><span id="passwordStatus"></span></td>
+		</tr>
+		<tr>
 
-<p style="font-size: 1.2em;">Look no further! The best place to start is our searchable <a href="/help/faq/"><b>FAQ</b></a>. If you can't find your answer there, you might try the <a href="/forums/"><b>Forums</b></a>.</p>
+			<td class="hiddenlabel"><label></label></td>
+			<td class="field" colspan="2">
+			<input id="remember" name="remember" type="checkbox" />
+			<label id="lRemember" for="remember" style="font-weight: normal; padding-left: 3px;">记住我</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="hiddenlabel"><label for="loginsubmit">登录</label></td>
 
-<form method="get" action="/help/search.rtm">
-<input type="text" name="q" size="30" value="" />
-<input type="submit" name="Search" value="Search" maxlength="100" />
-</form>
+			<td class="field" colspan="2">
+			<input id="loginsubmit" name="login" value="登录" type="submit">
+			<span style="padding-left: 3px;"><a href="/login/forgot.rtm">忘记了密码？</a></span>
+			</td>
+		</tr>
+		</table>
 
-<p>Still got questions or just want to say something nice? Feel free to <a href="/help/contact/"><b>contact us</b></a>.</p>  </div>
+		<input name="continue" value="home" type="hidden" />
+												<input name="u" type="hidden" value="1" />
+
+        </form>
+        
+	</div> <!-- /contentboxwrap -->      
+</div> <!-- /contentbox -->
+  </div>
 </div> <!-- /container-->
 
-<div id="footer-news"><span class="new">NEW</span><span class="ico"><a href="http://chewthebook.com/upgrade/"></a></span>想要更加有效的完成专业翻译任务? <a href="http://chewthebook.com/upgrade/">升级到专业版</a></div>
 <div id="footer">
 
 <div id="footer-content">
