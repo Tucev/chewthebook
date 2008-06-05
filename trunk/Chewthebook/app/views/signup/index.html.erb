@@ -251,7 +251,8 @@ return true;}
         </ul>
       </div--> <!-- /signuptab -->
       <div id="signupwrap">
-      		<form id="signupform" autocomplete="off" method="post" action="https://www.rememberthemilk.com/signup/">
+            <% form_tag({:controller => 'signup', :action => 'create'},:id => 'signupform') do %>
+      		<!-- form id="signupform" autocomplete="off" method="post" action="https://www.rememberthemilk.com/signup/" -->
 	  		  <table>
 	  		  <tr>
 	  		  	<td class="label"><label id="lfirstname" for="firstname">名字</label></td>
@@ -325,13 +326,16 @@ return true;}
 	  		  <tr>
 	  			<td class="label"><label id="lsignupsubmit" for="signupsubmit">注册</label></td>
 	  			<td class="field" colspan="2">
-	            <input id="signupsubmit" name="signup" type="submit" value="注册" />
+	            <!-- input id="signupsubmit" name="signup" type="submit" value="注册" / -->
+                                <%=submit_tag '注册' %>
 	  			</td>
 	  		  </tr>
 
 	  		  </table>
                     <input type="hidden" name="language" id="language" value="zh-CN" />
-                  </form>
+                    <%= form_tag %>
+                    <% end %>
+                  <!-- /form -->
       </div> <!-- /signupwrap -->
     </div> <!-- /signupbox -->
     <script type="text/javascript"><!--
@@ -394,4 +398,3 @@ urchinTracker();
 </script>
 </body>
 </html>
-
