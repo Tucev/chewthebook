@@ -1,0 +1,1920 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+
+    Remember The Milk(tm) (v2) - Copyright (c) 2007 Remember The Milk Pty Ltd
+                                 All rights reserved.
+
+    Non vi sed virtute, non armis sed arte paritur victoria.
+
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+<title>Remember The Milk - Charles任务</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="http://static.rememberthemilk.com/css/rtm.1.css" type="text/css" />
+<link rel="alternate" type="application/atom+xml" title="Charles任务 - Inbox" href="http://www.rememberthemilk.com/atom/charles.xu/3029577/" />
+<link rel="alternate" type="application/atom+xml" title="Charles任务 - 个人" href="http://www.rememberthemilk.com/atom/charles.xu/3029578/" />
+<link rel="alternate" type="application/atom+xml" title="Charles任务 - 学习" href="http://www.rememberthemilk.com/atom/charles.xu/3029579/" />
+<link rel="alternate" type="application/atom+xml" title="Charles任务 - 工作" href="http://www.rememberthemilk.com/atom/charles.xu/3029580/" />
+<link rel="alternate" type="application/atom+xml" title="Charles任务 - Sent" href="http://www.rememberthemilk.com/atom/charles.xu/3029581/" />
+<script>
+var RTM_GMAPS_URL = "http:\/\/maps.google.com\/maps?file=api&v=2.92&key=ABQIAAAAnYpYQK6lEddCpc9LdzRRZBQ-We2BOtNRpox9QkX788VK3QIjlhSYWzFDVlMNJaLjppgU1h4oX-sjyg&async=2&callback=LocationManager.GmapsAsyncCallback";
+
+</script>
+
+<script type="text/javascript" src="http://static.rememberthemilk.com/js/strings/zh-CN.interface.74.js"></script>
+<script type="text/javascript" src="http://static.rememberthemilk.com/js/sha1.js"></script>
+<script type="text/javascript" src="http://static.rememberthemilk.com/js/gears_init.js"></script>
+<script type="text/javascript" src="http://static.rememberthemilk.com/js/compiled/rtm.2.27.js"></script>
+<script type="text/javascript" src="http://static.rememberthemilk.com/js/intl/zh-CN.6.js"></script>
+<link rel="stylesheet" href="http://static.rememberthemilk.com/css/app/app.8.css" type="text/css" />
+<!--[if IE]>
+<link rel="stylesheet" href="http://static.rememberthemilk.com/css/app/app_ie.4.css" type="text/css" />
+<![endif]-->
+<style>
+#appheader { height: 1px; }
+</style>
+<!--[if gt IE 6]>
+<style>
+#appheader { height: auto; min-height: 1px; }
+</style>
+<![endif]-->
+
+<link rel="stylesheet" href="/css/intl/zh-CN/rtm.1.css" type="text/css" />
+</head>
+
+<body onload="rtmLoad();" onbeforeunload="try{rtmOnBeforeUnload();}catch(e){}">
+<div id="content">
+<div id="appheader">
+    <a href="/"><div id="appheaderlogo" style="position: absolute; height: 83px; width: 188px; cursor: pointer;"></div></a>
+        <div id="topnav" style="float: right;"><span id="personName" style="position: relative; color: #000; font-weight:bold;">charles.xu</span><span id="is-pro" class="prouser" style="display: none;"><img src="http://static.rememberthemilk.com/img/ico/ico_pro_sm.gif" alt="Pro" /></span><span id="offline-status" class="hidden"> | <img width="11" height="11" title="当前处于在线模式：点击切换到离线模式" alt="" class="hidden" id="is-connected" src="/img/ico/off-connected-synced.gif"/><img width="11" height="11" title="当前处于离线模式：点击切换到在线模式" alt="" class="hidden" id="is-disconnected" src="/img/ico/off-disconnected.gif"/><img width="11" height="11" title="正在同步&hellip;&hellip;" alt="" class="" id="is-syncing" src="/img/ico/off-connected-syncing.gif"/><span class="hidden" id="has-gears"><a href="#" onclick="try { this.blur(); Offline.Dialog.showGears(); return false; } catch(e) {} ">离线</a></span></span></span> | <span id="viewSelector">欢迎使用</span></div>
+
+    <div style="float: right; clear: right; padding-top: 7px;"><span id="datetime" style="white-space: nowrap; text-align: right; color: #A6A6A6; font-size: 10px;">初始化&hellip;</span></div>
+        <div id="searchbox">
+        <form onsubmit="control.updateListFilter(); return false;" action="">
+			<div id="searchboxwrap">
+	    	<table>
+			<tbody>
+			<tr>
+				<td style="width: 1px;">
+
+				<div id="searchicon">
+				</div>
+				</td>
+				<td>
+				<input onfocus="this.select();" type="text" id="listFilter" />
+				</td>
+			</tr>
+			</tbody>
+			</table>
+
+			</div>
+	        <div id="searchtogglewrap"><a id="searchtoggle" href="#" onclick="tasksView.toggleSearchOptions(); return false;">显示搜索选项</a></div>
+        </form>
+    </div>
+</div>
+
+<div id="statusbox" style="padding-left: 207px; height: 4.1em; visibility: hidden;">
+		<div class="orange_rbroundbox">
+		<div class="orange_rbtop"><div></div></div>
+		<div class="orange_rbcontent">
+
+				<table style="margin:0; padding:0; width: 100%;">
+                <tbody>
+				<tr>
+					<td style="padding-left: 6px; width: 10px;">
+						<img style="vertical-align: bottom; text-align: right;" src="http://static.rememberthemilk.com/img/ico/ico_info_org_org.gif" alt="Information" />
+					</td>
+					<td style="padding-left: 6px; text-align: left;">
+						<span id="statusboxtext" style="text-align: left; font-weight: bold;"></span>
+					</td>
+
+					<td style="padding-left: 6px; display: none;" id="statusboxbuttons">
+                        <span id="statusbutton_done"></span>
+                        <span id="statusbutton_cancel"></span>
+					</td>
+				</tr>
+                </tbody>
+				</table>
+		</div><!-- /orange_rbcontent -->
+		<div class="orange_rbbot"><div></div></div>
+
+		</div><!-- /orange_rbroundbox -->
+</div>
+
+<div id="break"></div>
+
+<div id="searchoptions" style="display: none;">
+<div id="searchoptionswrap">
+<form id="searchoptionsform" method="post" action="">
+  <table>
+  <tbody>
+  <tr>
+	<td class="formlabel"><label for="search_lists">搜索</label></td>
+
+	<td class="formfield"><select id="search_lists" name="search_lists" class="textfield"><option></option></select></td>
+	<td class="formlabel2"><label for="search_words">存在这些词语。</label></td>
+	<td class="formfield"><input id="search_words" name="search_words" class="textfield" value="" type="text" /></td>
+  </tr>
+  <tr>
+	<td class="formlabel"><label for="search_priority">优先级</label></td>
+	<td class="formfield"><select id="search_priority" name="search_priority" class="textfield"><option value="-1">任何</option><option value="-1">---</option><option value="1">优先级 1</option><option value="2">优先级 2</option><option value="3">优先级 3 </option><option value="N">无优先级</option></select></td>
+
+	<td class="formlabel2"><label for="search_words_not">没有</label></td>
+	<td class="formfield"><input id="search_words_not" name="search_words_not" class="textfield" value="" type="text" /></td>
+  </tr>
+  <tr>
+	<td class="formlabel"><label for="search_status">状态</label></td>
+	<td class="formfield"><select id="search_status" name="search_status" class="textfield"><option value="-1">任何</option><option value="-1">---</option><option value="false">未完成</option><option value="true">已完成</option></select></td>
+
+	<td class="formlabel2"><label for="search_notes">搜索便笺？</label></td>
+	<td class="formfield"><input id="search_notes" name="search_notes" value="" type="checkbox" /></td>
+  </tr>
+  <tr>
+	<td class="formlabel"><label for="search_shared">分享与</label></td>
+	<td class="formfield"><select id="search_shared" name="search_shared" class="textfield"><option></option></select></td>
+	<td class="formlabel2"><label for="search_archived">包含已存档的列表？</label></td>
+
+	<td class="formfield"><input id="search_archived" name="search_archived" value="" type="checkbox" /></td>
+  </tr>
+  
+
+  <tr>
+  <td class="formlabel"><label for="search_location">地点</label></td>
+  <td class="formfield"><select id="search_location" name="search_location" class="textfield"><option></option></select></td>
+	<td class="formlabel"><label for="search_tags">标签标为</label></td>
+	<td class="formfield"><input id="search_tags" name="search_tags" class="textfield" value="" type="text" /></td>
+	</tr>
+
+	<tr>
+  <td class="formlabel"><label for="search_estimate">时间估计</label></td>
+  <td class="formfield"><select id="search_estimatetype" name="search_estimatetype" class="textfield" style="width: 120px;"><option></option></select> <input id="search_estimate" name="search_estimate" class="textfield" value="" style="width: 60px;" type="text" />
+  <br /><div class="eg1" style="padding-left: 124px;">例如：20 分钟</div></td>
+    <td class="formlabel2"><label for="search_due_start">从</label></td>
+                <td class="formfield"><input id="search_due_start" name="search_due_start" class="textfield" value="" type="text" style="width: 60px" /> <b>起</b> <input id="search_due_range" name="search_due_range" class="textfield" value="" type="text" style="width: 110px" />	<br /><div class="eg1">例如 今天, 四月 25</div><div class="eg2" style="padding-left: 29px;">例如 1 天</div></td>
+
+  </tr>
+  
+  <tr>
+	<td colspan="4" style="padding-top: 6px; text-align: center;"><input id="search_begin" type="submit" value="搜索任务" style="margin-left: -10px; margin-right: 4px;" /><input id="search_cancel" type="submit" value="取消" /></td>
+  </tr>
+  </tbody>
+  </table>
+</form>
+</div> <!-- /searchoptionswrap -->
+<div id="searchadvtip"><img src="http://static.rememberthemilk.com/img/ico/ico_help_blu.gif" alt="Help" />更多 <a target="_blank" href="/help/answers/search/advanced.rtm">高级搜索</a> 功能可用。</div>
+
+</div> <!-- /searchoptions -->
+
+<div id="break2" style="display: none;"></div>
+
+<noscript>
+<h1>Remember The Milk requires JavaScript</h1>
+<p>Hi there,</p>
+<p>You've tried to access Remember The Milk, the best way to manage your tasks and get things done! Unfortunately, our application currently requires JavaScript to function properly.</p>
+<p>Don't worry, though, we haven't forgotten you: there's a full-featured <a href="http://m.rememberthemilk.com/">mobile version</a> of Remember The Milk available.</p>
+<p>If you have a capable browser, you might want to enable JavaScript -- it's worth it, we promise.</p>
+<p>Perhaps it's time to try a newer browser? We use and recommend either <a href="http://www.mozilla.org/">Mozilla Firefox</a> or <a href="http://www.opera.com/">Opera</a>.</p>
+<p>Sincerely,</p>
+<p><b>Remember The Milk</b></p>
+
+<div id="footer">
+  <div id="footercontent">
+    <a href="/about/">关于</a> | <a href="http://blog.rememberthemilk.com/">Blog</a> | <a href="/services/">服务</a> | <a href="/forums/">论坛</a> | <a href="/help/">帮助</a> | <a href="/help/terms.rtm">使用条款</a> | <a href="/help/privacy.rtm">隐私政策</a> |  &copy; 2007 Remember The Milk
+  </div>
+</div> <!-- /footer -->
+</noscript>
+<div id="mapview" style="display: none;">
+    <div id="mapbox">
+    <div id="searchmap">
+    	<div id="maploading"><img id="maploadingicon" src="/img/busy_inactive.gif" /></div>
+        <div id="searchmapoptions"><input type="checkbox" id="noduedate" checked onclick="locationMgr.toggleNoDueDate();" /><label for="noduedate">显示无到期日期的任务</label></div>
+
+        <form onsubmit="locationMgr.go(); return false;" name="map_main" action="">
+		<div id="searchmapinputwrap">
+			<table>
+			<tr>
+				<td><input onfocus="this.select();" id="map_location_inp" type="text" /></td>
+				<td><div onclick="locationMgr.go(); return false;" class="gobtn"><b class="gobtnwrap"><b class="gobtn1"></b><b class="gobtn2"></b></b><div class="gobtn_content">定位</div><b class="gobtnwrap"><b class="gobtn2"></b><b class="gobtn1"></b></b></div></td>
+			</tr>
+			</table>
+
+		</div>
+        </form>
+    </div> <!-- /searchmap -->
+    <div id="mapwrap">
+        <div id="map">载入中&hellip;</div>
+        <div id="map_rtm_infowindow" style="display: none;"></div>
+    </div> <!-- /mapwrap -->
+
+    <div class="appfooter">
+        <div class="appfootercontent">
+      <a href="/about/" target="_blank">关于</a> | <a href="http://blog.rememberthemilk.com/" target="_blank">Blog</a> | <a href="/services/" target="_blank">服务</a> | <a href="/forums/" target="_blank">论坛</a> | <a href="/help/" target="_blank">帮助</a>  | <a href="/help/terms.rtm" target="_blank">使用条款</a> | <a href="/help/privacy.rtm" target="_blank">隐私政策</a>
+
+  </div> <!-- /appfootercontent -->
+</div> <!-- /appfooter -->
+    </div> <!-- /mapbox -->
+    <div id="locationsbox">
+        <div id="locationadd" onclick="locationMgr.handleAddLocation(); return false;"><img class="locationaddicon" src="/img/ico/ico_add.gif" alt="_T('INTERFACE_LOCATIONS_ADD_LOCATION')"><a title="添加 (t)" href=" " class="locationadd">添加地点</a></div>
+        <div id="locations_display">
+            <div id="locationswrap">
+
+                <div id="locationstblwrap">
+                  <table id="locationstbl">
+                  </table>
+                </div>
+                <div id="locationsmanage"><a href=" " onclick="locationMgr.handleManageLocations(); return false;">管理地点</a></div>
+            </div>
+        </div>
+		<div id="loc_key">
+
+			<img id="loc_key_close" class="xtarget" src="http://static.rememberthemilk.com/img/ico/ico_cross_gry.gif" alt="关闭提示面板" />
+			<div id="loc_key_wrap">
+				<div id="loc_key_head"><img src="http://static.rememberthemilk.com/img/ico/ico_key.gif" id="loc_key_icon" alt="提示" /><span id="loc_key_title">提示</span></div>
+				<div id="loc_key_content">
+					优先级：					<div id="loc_key_prio_wrap"><span class="loc_key_prio loc_key_prio1">1</span><span class="loc_key_prio loc_key_prio2">2</span><span class="loc_key_prio loc_key_prio3">3</span><span class="loc_key_prio loc_key_prio4">无</span></div>
+				</div> <!-- /loc_key_content -->
+
+			</div> <!-- /loc_key_wrap -->
+		</div> <!-- /loc_key -->
+    </div> <!-- /locationsbox -->
+</div> <!-- /mapview -->
+<div id="overview" style="display: none;">
+    <div id="overviewleft" style="float: left;">
+        <div id="overviewnews" style="display: none; margin:0; padding:0;">
+        	<div id="overviewnewsbox" class="white_rbroundbox" style="padding-bottom: 20px;">
+
+			<div class="white_rbtop"><div><div></div></div></div>
+			<div class="white_rbcontentwrap"><div class="white_rbcontent">
+				<div><img id="newsclose" src="http://static.rememberthemilk.com/img/ico/ico_cross_gry.gif" style="float: right; padding-right: 9px;" alt="Close News Item" /></div>
+				<div style="padding: 0.6em 1.5em 0.9em 1.5em;">
+				<div style="color: #8B8B8B; padding-bottom: 0.8em; font-weight: bold;">Remember The Milk 新闻</div>
+				<div id="overviewnews_text" style="padding-bottom: 0.5em; line-height: 1.3em; color: #575757"></div>
+				<div id="overviewnews_date" style="font-size: 0.95em; color: #999;">发布日期：{DATE}</div>
+            	</div>
+
+			</div><!-- /white_rbcontent -->
+			</div><!-- /white_rbcontentwrap -->
+			<div class="white_rbbot"><div><div></div></div></div>
+			</div><!-- /white_rbroundbox -->
+        </div>
+
+        <div>
+            <div id="overviewtabs">
+            </div>
+
+            <div style="margin:0; padding-top:1.8em; clear:both; border-left: 1px solid #cacaca; border-right: 1px solid #cacaca;">
+            <div id="overviewlist"></div>
+            </div>
+        </div>
+
+
+    <div class="appfooter">
+        
+    <div id="appfooter-news-overview" class="appfooter-news" style="display: ">
+      <div class="appfooter-news-content"><table><tr><td class="icons"><span class="new">NEW</span><span class="ico"><a href="/upgrade/" target="_blank"><img src="http://static.rememberthemilk.com/img/ico/ico_pro.gif" alt="Pro" /></a></span></td><td>Has RTM made you more organized and productive? <a target="_blank" href="/upgrade/">Upgrade to Pro</a> and support RTM.</td></tr></table></div>
+
+    </div>
+        <div class="appfootercontent">
+      <a href="/about/" target="_blank">关于</a> | <a href="http://blog.rememberthemilk.com/" target="_blank">Blog</a> | <a href="/services/" target="_blank">服务</a> | <a href="/forums/" target="_blank">论坛</a> | <a href="/help/" target="_blank">帮助</a>  | <a href="/help/terms.rtm" target="_blank">使用条款</a> | <a href="/help/privacy.rtm" target="_blank">隐私政策</a>
+
+  </div> <!-- /appfootercontent -->
+</div> <!-- /appfooter -->
+    </div> <!-- /overviewleft -->
+
+    <div id="overviewright" style="float: right; z-index: 3;">
+        <div id="overviewcontinue">
+			<b class="blue_rb"><b class="blue_rb1"><b></b></b><b class="blue_rb2"><b></b></b><b class="blue_rb3"></b><b class="blue_rb4"></b><b class="blue_rb5"></b></b>
+			<div class="blue_rbcontent"><a href="#section.tasks" title="开始任务管理" style="font-size: 1.2em; font-weight: bold; text-decoration: none; color: #fff;" id="continue_tasks">&raquo; 开始任务管理</a></div>
+
+			<b class="blue_rb"><b class="blue_rb5"></b><b class="blue_rb4"></b><b class="blue_rb3"></b><b class="blue_rb2"><b></b></b><b class="blue_rb1"><b></b></b></b>
+        </div>
+        <div id="overviewskip" style="padding-top: 1em; text-align: center;">
+            <a href="#section.tasks" title="下次不显示此页" id="continue_tasks_always">下次不显示此页</a>
+        </div>
+        <div id="overviewwhatsnew" style="padding-top: 1.5em;">
+
+    <div id="whatsnewbox" class="white_rbroundbox">
+    <div class="white_rbtop"><div><div></div></div></div>
+
+    <div class="white_rbcontentwrap"><div class="white_rbcontent">
+		<div style="padding: 0.7em 1.5em 0.2em 1.5em;">
+			<div style="color: #8B8B8B; padding-bottom: 1.2em; font-weight: bold;">有什么新消息？</div>
+			<div style="padding-left: 0.5em;">
+                <table id="whatsnew_table">
+                <tbody><tr><td></td></tr></tbody>
+                </table>
+			</div>
+
+		</div>
+	</div><!-- /white_rbcontent -->
+    </div><!-- /white_rbcontentwrap -->
+    <div class="white_rbbot"><div><div></div></div></div>
+    </div><!-- /white_rbroundbox -->
+
+        </div>
+        <!--div id="overviewinvite">
+			<div id="overviewinvitebox" class="white_rbroundbox" style="width: 245px;">
+			<div class="white_rbtop"><div><div></div></div></div>
+			<div class="white_rbcontentwrap"><div class="white_rbcontent">
+				<div style="padding: 0.6em 1.5em 0.9em 1.5em;">
+				<div style="color: #8B8B8B; padding-bottom: 0.8em; font-weight: bold;">INVITE YOUR FRIENDS</div>
+				<div style="line-height: 1.3em; color: #575757">Think your friends would like this too? <a id="overview_invite_friends" href=" ">Invite them!</a></div>
+				</div>
+			</div>
+			</div>
+			<div class="white_rbbot"><div><div></div></div></div>
+			</div>
+        </div-->
+
+		<div class="taskcloud" style="padding-top: 1.3em;">
+
+			<div class="taskcloudbox white_rbroundbox">
+			<div class="white_rbtop"><div><div></div></div></div>
+			<div class="white_rbcontentwrap"><div class="white_rbcontent">
+				<div id="taskcloudcontent" class="taskcloudcontent">
+					<span class="listtag" style="font-size: 1.0em;"><a href="#" title="0 tasks">载入中&hellip;</a></span>
+				</div> <!-- /taskcloudcontent -->
+				<div class="taskcloudwhat">
+				<span class="taskcloudwhatcontent"><a href="/help/answers/tags/taskcloud.rtm" target="_blank">这是什么？</a></span>
+
+				</div> <!-- /taskcloudwhat -->
+			</div><!-- /white_rbcontent -->
+			</div><!-- /white_rbcontentwrap -->
+			<div class="white_rbbot"><div><div></div></div></div>
+			</div><!-- /white_rbroundbox -->
+        </div> <!-- /taskcloud -->
+
+
+    </div> <!-- /overviewright -->
+
+    <br style="clear: both; height: 1px;" />
+</div>
+<div id="appview" style="display: none;">
+    <div id="listbox">
+    <div id="list">
+    <div id="listtabs" style="display: none;">
+    <script type="text/javascript">
+    listTabs = new XTabs('listtabs');
+    listTabs.init();
+
+    listTabs.addEntry("\u6536\u4ef6\u7bb1", [0,3029577]);
+listTabs.addEntry("\u4e2a\u4eba", [0,3029578]);
+listTabs.addEntry("\u5b66\u4e60", [0,3029579]);
+listTabs.addEntry("\u5de5\u4f5c", [0,3029580]);
+listTabs.addEntry("\u53d1\u4ef6\u7bb1", [0,3029581]);
+      listTabs.blitDiv();
+    </script>
+    </div>
+    <div id="contacttabs" style="display: none;">
+
+    </div>
+    <div id="settingstabs" style="display: none;">
+    </div>
+    <div id="listwrap">
+    <div id="tools_spacer" style="margin:0; clear: both; padding-top: 1.8em; border-left: 1px solid #CACAAC; border-right: 1px solid #CACACA;"></div>
+    <div id="tools" style="display: none;">
+        <div id="sorting">
+      <div id="sort-button" class="sortbtn">
+      <table class="unsel">
+
+      <tr>
+        <td class="lft"></td>
+        <td class="mid"><span class="unsel">排序... <img src="/img/ico/ico_arr_sort.gif" width="9" height="5" /></span></td>
+        <td class="rgt"></td>
+      </tr>
+      </table>
+      </div> <!-- /sortbtn -->
+      <div id="sort-list" class="sortlist" style="display: none;">
+
+      <table>
+      <tr>
+        <td class="sortchk sortchk_on">&nbsp;</td>
+        <td class="sorttype">优先级</td>
+      </tr>
+      <tr>
+        <td class="sortchk">&nbsp;</td>
+        <td class="sorttype">到期日期</td>
+
+      </tr>
+      <tr>
+        <td class="sortchk">&nbsp;</td>
+        <td class="sorttype">任务名</td>
+      </tr>
+      </table>
+      </div> <!-- /sortlist -->
+    </div> <!-- /sorting -->
+
+    <div id="tasksToolbox" style="display: none;">
+    </div>
+    <div id="tasksCompletedToolbox" style="display: none;">
+    </div>
+    <div id="tasksSentToolbox" style="display: none;">
+    </div>
+    <div id="contactsToolbox" style="display: none;">
+    </div>
+    <div id="groupsToolbox" style="display: none;">
+
+    </div>
+    <div id="listsToolbox" style="display: none;">
+    </div>
+    <div id="locationsToolbox" style="display: none;">
+    </div>
+    <div id="tagToolbox" style="display: none;">
+    </div>
+    <script type="text/javascript">
+        tasksToolBox = new Toolbox('tasksToolbox');
+        tasksToolBox.init();
+
+        tasksToolBox.addButton("\u5b8c\u6210");
+        tasksToolBox.addButton("\u63a8\u8fdf");
+
+        tasksToolBox.addListAction("\u5176\u4ed6\u64cd\u4f5c\u2026", false, false);
+        tasksToolBox.addListSeperator();
+        tasksToolBox.addListAction("\u53d1\u9001\u7ed9\u2026", false, false);
+        tasksToolBox.addListAction("\u5206\u4eab\u4e0e\u2026", false, false);
+        tasksToolBox.addListAction("\u590d\u5236\u4efb\u52a1", false, false);
+        tasksToolBox.addListAction("\u5220\u9664\u4efb\u52a1", false, false);
+        tasksToolBox.addListSeperator();
+        tasksToolBox.addListAction("\u8bbe\u7f6e\u4f18\u5148\u7ea7\u2026", true, false);
+        tasksToolBox.addListAction("\u4f18\u5148\u7ea7\u8bbe\u4e3a1", false, true);
+        tasksToolBox.addListAction("\u4f18\u5148\u7ea7\u8bbe\u4e3a2", false, true);
+        tasksToolBox.addListAction("\u4f18\u5148\u7ea7\u8bbe\u4e3a3", false, true);
+        tasksToolBox.addListAction("\u8bbe\u4e3a\u65e0\u4f18\u5148\u7ea7", false, true);
+        tasksToolBox.addListAction("\u63d0\u9ad8\u4f18\u5148\u7ea7", false, true);
+        tasksToolBox.addListAction("\u964d\u4f4e\u4f18\u5148\u7ea7", false, true);
+        tasksToolBox.addListSeperator();
+        tasksToolBox.addListAction("\u79fb\u52a8\u81f3\u2026", true, false);
+        tasksToolBox.addListSeperator();
+        tasksToolBox.addListAction("\u64a4\u6d88\u4e0a\u4e00\u4e2a\u64cd\u4f5c", true, false);
+
+        tasksToolBox.addSelector("\u5168\u90e8");
+        tasksToolBox.addSelector("\u4eca\u5929\u5230\u671f");
+        tasksToolBox.addSelector("\u660e\u5929\u5230\u671f");
+        tasksToolBox.addSelector("\u8fc7\u671f");
+        tasksToolBox.addSelector("\u65e0");
+
+        tasksToolBox.blitDiv();
+
+        tasksCompletedToolBox = new Toolbox('tasksCompletedToolbox');
+        tasksCompletedToolBox.init();
+        tasksCompletedToolBox.addButton("\u672a\u5b8c\u6210");
+
+        tasksCompletedToolBox.addListAction("\u5176\u4ed6\u64cd\u4f5c\u2026", false, false);
+        tasksCompletedToolBox.addListSeperator();
+        tasksCompletedToolBox.addListAction("\u590d\u5236\u4efb\u52a1", false, false);
+        tasksCompletedToolBox.addListAction("\u5220\u9664\u4efb\u52a1", false, false);
+        tasksCompletedToolBox.addListSeperator();
+        tasksCompletedToolBox.addListAction("\u79fb\u52a8\u81f3\u2026", true, false);
+        tasksCompletedToolBox.addListSeperator();
+        tasksCompletedToolBox.addListAction("\u64a4\u6d88\u4e0a\u4e00\u4e2a\u64cd\u4f5c", false, false);
+
+        tasksCompletedToolBox.addSelector("\u5168\u90e8");
+        tasksCompletedToolBox.addSelector("\u65e0");
+        tasksCompletedToolBox.blitDiv();
+
+        tasksSentToolBox = new Toolbox('tasksSentToolbox');
+        tasksSentToolBox.init();
+
+        tasksSentToolBox.addListAction("\u5176\u4ed6\u64cd\u4f5c\u2026", false, false);
+        tasksSentToolBox.addListSeperator();
+        tasksSentToolBox.addListAction("\u5220\u9664\u4efb\u52a1", false, false);        
+        tasksSentToolBox.addListSeperator();
+        tasksSentToolBox.addListAction("\u64a4\u6d88\u4e0a\u4e00\u4e2a\u64cd\u4f5c", false, false);
+
+        tasksSentToolBox.addSelector("\u5168\u90e8");
+        tasksSentToolBox.addSelector("\u65e0");
+        tasksSentToolBox.blitDiv();
+    </script>
+
+            <div id="addEntry" class="addEntryTask" style="display: none;"><img class="taskaddicon" src="http://static.rememberthemilk.com/img/ico/ico_add.gif" alt="添加(t)" /><a title="添加(t)" href="#" class="taskadd">添加任务</a></div>
+    <br />
+    <br />
+        </div> <!-- /tools -->
+    <div id="midcontent">
+    <div style="border-left: 1px solid #CACACA; border-right: 1px solid #CACACA; margin: 0px; clear: both;">
+        <div id="adding" style="display: none;"></div>
+        <div id="loading" style="display: none;"></div>
+
+    <div id="tasks" style="display: none;"></div>
+    <div id="taskscompleted" style="display: none;"></div>
+        <div id="contacts" style="display: none;"></div>
+    <div id="groups" style="display: none;"></div>
+    <div id="lists" style="display: none;"></div>
+    <div id="tag-manager" style="display: none;"></div>
+    <div id="locations" style="display: none;"></div>
+    </div>
+    <div id="invites" style="display: none; border: 1px solid #cacaca; border-top: 0; clear: both; text-align: left;">
+
+      <div>
+        <form id="inviteform" method="post" action=" " autocomplete="off">
+        <table style="empty-cells: show;">
+         <tbody>
+           <tr>
+            <td></td>
+            <td class="field">
+             <div style="padding-left: 5px; font-weight: bold;">发送邀请&hellip;</div>
+
+            </td>
+           </tr>
+           <tr>
+            <td class="label">
+              <label for="invite_firstname">名字</label>
+            </td>
+            <td class="field">
+              <input type="text" id="invite_firstname"></input>
+
+            </td>
+           </tr>
+
+           <tr>
+            <td class="label">
+              <label for="invite_email">电子邮件</label>
+            </td>
+            <td class="field">
+              <input type="text" id="invite_email"></input>
+
+            </td>
+           </tr>
+
+           <tr>
+            <td class="label" style="vertical-align: top; padding-top: 3px;">
+              <label for="invite_note">便笺</label>
+            </td>
+            <td class="field">
+              <textarea id="invite_note"></textarea>
+
+            </td>
+           </tr>
+
+           <tr>
+            <td></td>
+            <td class="field">
+                <input style="width: auto;" type="submit" id="invite_send" value="发送邀请"></input>
+            </td>
+           </tr>
+
+         </tbody>
+        </table>
+        </form>
+     </div>
+    </div>
+    <!-- div id="settings" style="display: none;" -->
+      <div id="general" style="display: none;">
+          <div id="generalsettingswrap" class="contentboxwrap">
+            <div id="accountstatus">
+
+            <span id="account-status-pro" style="display: none;">You have a Remember The Milk <a target="_blank" href="/upgrade/">Pro account</a>. It expires on <b id="account-status-date">{EXPIRE_DATE}</b>.<br />
+            <a target="_blank" href="/account/order/">Extend your Pro account</a>, <a target="_blank" href="/account/order/history/">view your order history</a>, or <a target="_blank" href="/account/order/gifts/">view the gifts you've purchased</a>.</span>
+            <span id="account-status-free">You have a free Remember The Milk account, which you can <a target="_blank" href="/upgrade/">upgrade</a> to a Pro account.            You can also <a target="_blank" href="/account/order/history/">view your order history</a> or <a target="_blank" href="/account/order/gifts/">view the gifts you've purchased</a>.</span>
+
+            </div>
+            <form id="settingsform" autocomplete="off">
+			<table>
+			<tr>
+				<td class="label"><label for="firstname">名字</label></td>
+				<td class="field"><input class="textfield" id="firstname" name="firstname" type="text" /></td>
+				<td class="status"><span id="firstnameStatus"></span></td>
+			</tr>
+
+			<tr>
+				<td class="label"><label for="lastname">姓氏</label></td>
+				<td class="field"><input class="textfield" id="lastname" name="lastname" type="text" /></td>
+				<td class="status"><span id="lastnameStatus"></span></td>
+			</tr>
+			<tr>
+				<td class="label"><label for="password">用户密码</label></td>
+				<td class="field"><a id="settings-change-password" href="https://www.rememberthemilk.com/login/password.rtm" target="_blank">更改您的密码</a></td>
+
+				<td class="status"><span id="firstPasswordStatus"></span></td>
+			</tr>
+			<tr>
+				<td class="label"><label for="email">电子邮件</label></td>
+				<td class="field"><input class="textfield" id="email" name="email" type="text" /></td>
+				<td class="status"><span id="emailStatus"></span></td>
+			</tr>
+			<tr>
+
+				<td class="label"><label>哪个更不错</label></td>
+				<td class="field" colspan="2">
+				<span>
+				<input id="dateformat_eu" name="dateformat" type="radio" />
+				<label for="dateformat_eu" style="font-weight: normal;">14/02/07</label>
+				</span>
+				<span style="padding-left: 3px;">
+				<input id="dateformat_am" name="dateformat" type="radio" />
+
+                <label for="dateformat_am" style="font-weight: normal;">02/14/07</label>
+				</span>
+				</td>
+			</tr>
+			<tr id="settings-general-timeformat">
+				<td class="label"><label>时间格式</label></td>
+				<td class="field" colspan="2">
+				<span>
+
+				<input id="timeformat_12" name="timeformat" type="radio" />
+                <label for="timeformat_12" style="font-weight: normal;">5:00pm</label>
+				</span>
+				<span style="padding-left: 3px;">
+				<input id="timeformat_24" name="timeformat" type="radio" />
+                <label for="timeformat_24" style="font-weight: normal;">17:00</label>
+				</span>
+				</td>
+
+			</tr>
+			<tr>
+				<td class="label"><label for="taskcloud">任务云</label></td>
+				<td class="field"><input type="checkbox" id="taskcloud" /><span style="padding-left: 5px;"><label for="taskcloud" style="font-weight: normal;">在任务屏幕显示任务云。</label></span></td>
+				<td class="status"><span id="taskCloudStatus"></span></td>
+			</tr>
+			<tr>
+				<td class="label"><label for="tagslist">标签
+
+
+</label></td>
+				<td class="field">
+				<select id="tagslist" style="width: 170px;">
+				<option value="1">在左侧显示标签</option>
+				<option value="2">在右侧显示标签</option>
+				<option value="0">列表中不显示标签</option>
+				</select>
+				</td>
+
+				<td class="status"><span id="tagsListStatus"></span></td>
+			</tr>
+			<tr>
+				<td class="label"><label>私人地址</label></td>
+				<td class="field" colspan="2">
+				<span>
+				<input id="private_on" name="privateaddresses" type="radio" />
+                <label for="private_on" style="font-weight: normal;">打开</label>
+
+				</span>
+				<span style="padding-left: 3px;">
+				<input id="private_off" name="privateaddresses" type="radio" />
+                <label for="private_off" style="font-weight: normal;">关闭</label>
+				</span>
+				<!-- span style="padding-left: 3px;">(<a href="" target="_blank">了解更多</a>)</span -->
+				</td>
+			</tr>
+
+			<tr id="reset-private-urls-row">
+				<td class="hiddenlabel"><label for="resetprivate">私人地址</label></td>
+				<td class="field"><span><a id="reset-private-urls" href="#">重设私人URLs</a></span></td>
+				<td class="status"><span id="privateAddressesStatus"></span></td>
+			</tr>
+			<tr>
+				<td class="label"><label for="language">语言</label></td>
+
+				<td class="field">
+				<select id="language">
+				<option value="bs">Bosanski</option>
+<option value="cs">Český</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="en-GB">English (UK)</option>
+<option value="en-US">English (US)</option>
+
+<option value="es">Español</option>
+<option value="fr">Français</option>
+<option value="it">Italiano</option>
+<option value="lv">Latviešu</option>
+<option value="hu">Magyar</option>
+<option value="nl">Nederlands</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="sv">Svenska</option>
+<option value="tr">Türkçe</option>
+<option value="ru">Русский</option>
+<option value="zh-CN">中文 (简体)</option>
+<option value="zh-TW">中文 (繁體)</option>
+<option value="ja">日本語</option>
+<option value="ko">한국어</option>				</select>
+
+				</td>
+				<td class="status"><span id="languageStatus"></span></td>
+			</tr>
+			<tr>
+				<td class="label"><label for="country">国家/地区</label></td>
+				<td class="field">
+				<select id="country" style="width: 300px;">
+				<option value="-1">--- 未指定 ---</option>
+
+				<option value="1">Afghanistan</option>
+<option value="2">Albania</option>
+<option value="3">Algeria</option>
+<option value="4">American Samoa</option>
+<option value="5">Andorra</option>
+<option value="6">Angola</option>
+<option value="7">Anguilla</option>
+<option value="8">Antarctica</option>
+
+<option value="9">Antigua and Barbuda</option>
+<option value="10">Argentina</option>
+<option value="11">Armenia</option>
+<option value="12">Aruba</option>
+<option value="13">Australia</option>
+<option value="14">Austria</option>
+<option value="15">Azerbaijan</option>
+<option value="16">Bahamas, The</option>
+<option value="17">Bahrain</option>
+
+<option value="18">Bangladesh</option>
+<option value="19">Barbados</option>
+<option value="20">Belarus</option>
+<option value="21">Belgium</option>
+<option value="22">Belize</option>
+<option value="23">Benin</option>
+<option value="24">Bermuda</option>
+<option value="25">Bhutan</option>
+<option value="26">Bolivia</option>
+
+<option value="27">Bosnia and Herzegovina</option>
+<option value="28">Botswana</option>
+<option value="29">Bouvet Island</option>
+<option value="30">Brazil</option>
+<option value="31">British Indian Ocean Territory</option>
+<option value="32">British Virgin Islands</option>
+<option value="33">Brunei</option>
+<option value="34">Bulgaria</option>
+<option value="35">Burkina Faso</option>
+
+<option value="36">Burma</option>
+<option value="37">Burundi</option>
+<option value="38">Cambodia</option>
+<option value="39">Cameroon</option>
+<option value="40">Canada</option>
+<option value="41">Cape Verde</option>
+<option value="42">Cayman Islands</option>
+<option value="43">Central African Republic</option>
+<option value="44">Chad</option>
+
+<option value="45">Chile</option>
+<option value="46">China</option>
+<option value="47">Christmas Island</option>
+<option value="48">Cocos (Keeling) Islands</option>
+<option value="49">Colombia</option>
+<option value="50">Comoros</option>
+<option value="51">Congo, Democratic Republic of the</option>
+<option value="52">Congo, Republic of the</option>
+<option value="53">Cook Islands</option>
+
+<option value="54">Costa Rica</option>
+<option value="55">Cote d'Ivoire</option>
+<option value="56">Croatia</option>
+<option value="57">Cuba</option>
+<option value="58">Cyprus</option>
+<option value="59">Czech Republic</option>
+<option value="60">Denmark</option>
+<option value="61">Djibouti</option>
+<option value="62">Dominica</option>
+
+<option value="63">Dominican Republic</option>
+<option value="64">East Timor</option>
+<option value="65">Ecuador</option>
+<option value="66">Egypt</option>
+<option value="67">El Salvador</option>
+<option value="68">Equatorial Guinea</option>
+<option value="69">Eritrea</option>
+<option value="70">Estonia</option>
+<option value="71">Ethiopia</option>
+
+<option value="72">Falkland Islands (Islas Malvinas)</option>
+<option value="73">Faroe Islands</option>
+<option value="74">Fiji</option>
+<option value="75">Finland</option>
+<option value="76">France</option>
+<option value="77">French Guiana</option>
+<option value="78">French Polynesia</option>
+<option value="79">French Southern and Antarctic Lands</option>
+<option value="80">Gabon</option>
+
+<option value="81">Gambia, The</option>
+<option value="82">Georgia</option>
+<option value="83">Germany</option>
+<option value="84">Ghana</option>
+<option value="85">Gibraltar</option>
+<option value="86">Greece</option>
+<option value="87">Greenland</option>
+<option value="88">Grenada</option>
+<option value="89">Guadeloupe</option>
+
+<option value="90">Guam</option>
+<option value="91">Guatemala</option>
+<option value="92">Guernsey</option>
+<option value="93">Guinea</option>
+<option value="94">Guinea-Bissau</option>
+<option value="95">Guyana</option>
+<option value="96">Haiti</option>
+<option value="97">Heard Island and McDonald Islands</option>
+<option value="98">Holy See (Vatican City)</option>
+
+<option value="99">Honduras</option>
+<option value="100">Hong Kong</option>
+<option value="101">Hungary</option>
+<option value="102">Iceland</option>
+<option value="103">India</option>
+<option value="104">Indonesia</option>
+<option value="105">Iran</option>
+<option value="106">Iraq</option>
+<option value="107">Ireland</option>
+
+<option value="108">Israel</option>
+<option value="109">Italy</option>
+<option value="110">Jamaica</option>
+<option value="111">Japan</option>
+<option value="112">Jersey</option>
+<option value="113">Jordan</option>
+<option value="114">Kazakhstan</option>
+<option value="115">Kenya</option>
+<option value="116">Kiribati</option>
+
+<option value="117">Korea, North</option>
+<option value="118">Korea, South</option>
+<option value="119">Kuwait</option>
+<option value="120">Kyrgyzstan</option>
+<option value="121">Laos</option>
+<option value="122">Latvia</option>
+<option value="123">Lebanon</option>
+<option value="124">Lesotho</option>
+<option value="125">Liberia</option>
+
+<option value="126">Libya</option>
+<option value="127">Liechtenstein</option>
+<option value="128">Lithuania</option>
+<option value="129">Luxembourg</option>
+<option value="130">Macau</option>
+<option value="131">Macedonia, The Former Yugoslav Republic of</option>
+<option value="132">Madagascar</option>
+<option value="133">Malawi</option>
+<option value="134">Malaysia</option>
+
+<option value="135">Maldives</option>
+<option value="136">Mali</option>
+<option value="137">Malta</option>
+<option value="138">Man, Isle of</option>
+<option value="139">Marshall Islands</option>
+<option value="140">Martinique</option>
+<option value="141">Mauritania</option>
+<option value="142">Mauritius</option>
+<option value="143">Mayotte</option>
+
+<option value="144">Mexico</option>
+<option value="145">Micronesia, Federated States of</option>
+<option value="146">Moldova</option>
+<option value="147">Monaco</option>
+<option value="148">Mongolia</option>
+<option value="149">Montserrat</option>
+<option value="150">Morocco</option>
+<option value="151">Mozambique</option>
+<option value="152">Namibia</option>
+
+<option value="153">Nauru</option>
+<option value="154">Nepal</option>
+<option value="155">Netherlands</option>
+<option value="156">Netherlands Antilles</option>
+<option value="157">New Caledonia</option>
+<option value="158">New Zealand</option>
+<option value="159">Nicaragua</option>
+<option value="160">Niger</option>
+<option value="161">Nigeria</option>
+
+<option value="162">Niue</option>
+<option value="163">Norfolk Island</option>
+<option value="164">Northern Mariana Islands</option>
+<option value="165">Norway</option>
+<option value="166">Oman</option>
+<option value="167">Pakistan</option>
+<option value="168">Palau</option>
+<option value="169">Panama</option>
+<option value="170">Papua New Guinea</option>
+
+<option value="171">Paraguay</option>
+<option value="172">Peru</option>
+<option value="173">Philippines</option>
+<option value="174">Pitcairn Islands</option>
+<option value="175">Poland</option>
+<option value="176">Portugal</option>
+<option value="177">Puerto Rico</option>
+<option value="178">Qatar</option>
+<option value="179">Reunion</option>
+
+<option value="180">Romania</option>
+<option value="181">Russia</option>
+<option value="182">Rwanda</option>
+<option value="183">Saint Helena</option>
+<option value="184">Saint Kitts and Nevis</option>
+<option value="185">Saint Lucia</option>
+<option value="186">Saint Pierre and Miquelon</option>
+<option value="187">Saint Vincent and the Grenadines</option>
+<option value="188">Samoa</option>
+
+<option value="189">San Marino</option>
+<option value="190">Sao Tome and Principe</option>
+<option value="191">Saudi Arabia</option>
+<option value="192">Senegal</option>
+<option value="193">Serbia and Montenegro</option>
+<option value="194">Seychelles</option>
+<option value="195">Sierra Leone</option>
+<option value="196">Singapore</option>
+<option value="197">Slovakia</option>
+
+<option value="198">Slovenia</option>
+<option value="199">Solomon Islands</option>
+<option value="200">Somalia</option>
+<option value="201">South Africa</option>
+<option value="202">South Georgia and the South Sandwich Islands</option>
+<option value="203">Spain</option>
+<option value="204">Sri Lanka</option>
+<option value="205">Sudan</option>
+<option value="206">Suriname</option>
+
+<option value="207">Svalbard</option>
+<option value="208">Swaziland</option>
+<option value="209">Sweden</option>
+<option value="210">Switzerland</option>
+<option value="211">Syria</option>
+<option value="212">Taiwan</option>
+<option value="213">Tajikistan</option>
+<option value="214">Tanzania</option>
+<option value="215">Thailand</option>
+
+<option value="216">Togo</option>
+<option value="217">Tokelau</option>
+<option value="218">Tonga</option>
+<option value="219">Trinidad and Tobago</option>
+<option value="220">Tunisia</option>
+<option value="221">Turkey</option>
+<option value="222">Turkmenistan</option>
+<option value="223">Turks and Caicos Islands</option>
+<option value="224">Tuvalu</option>
+
+<option value="225">Uganda</option>
+<option value="226">Ukraine</option>
+<option value="227">United Arab Emirates</option>
+<option value="228">United Kingdom</option>
+<option value="229">United States</option>
+<option value="230">Uruguay</option>
+<option value="231">Uzbekistan</option>
+<option value="232">Vanuatu</option>
+<option value="233">Venezuela</option>
+
+<option value="234">Vietnam</option>
+<option value="235">Virgin Islands</option>
+<option value="236">Wallis and Futuna</option>
+<option value="237">Western Sahara</option>
+<option value="238">Yemen</option>
+<option value="239">Zambia</option>
+<option value="240">Zimbabwe</option>
+				</select>
+				</td>
+
+				<td class="status"><span id="countryStatus"></span></td>
+			</tr>
+			<tr>
+				<td class="label"><label for="timezone">时区</label></td>
+				<td class="field">
+				<select id="timezone" style="width: 300px;">
+				<option value="-1">--- 未指定 ---</option>
+				<option value="-39600_351">(GMT-11:00) Pacific/Apia</option>
+
+<option value="-39600_371">(GMT-11:00) Pacific/Midway</option>
+<option value="-39600_373">(GMT-11:00) Pacific/Niue</option>
+<option value="-39600_376">(GMT-11:00) Pacific/Pago_Pago</option>
+<option value="-36000_53">(GMT-10:00) America/Adak</option>
+<option value="-36000_357">(GMT-10:00) Pacific/Fakaofo</option>
+<option value="-36000_364">(GMT-10:00) Pacific/Honolulu</option>
+<option value="-36000_365">(GMT-10:00) Pacific/Johnston</option>
+<option value="-36000_381">(GMT-10:00) Pacific/Rarotonga</option>
+<option value="-36000_383">(GMT-10:00) Pacific/Tahiti</option>
+
+<option value="-34200_370">(GMT-09:30) Pacific/Marquesas</option>
+<option value="-32400_54">(GMT-09:00) America/Anchorage</option>
+<option value="-32400_119">(GMT-09:00) America/Juneau</option>
+<option value="-32400_142">(GMT-09:00) America/Nome</option>
+<option value="-32400_178">(GMT-09:00) America/Yakutat</option>
+<option value="-32400_361">(GMT-09:00) Pacific/Gambier</option>
+<option value="-28800_90">(GMT-08:00) America/Dawson</option>
+<option value="-28800_124">(GMT-08:00) America/Los_Angeles</option>
+<option value="-28800_172">(GMT-08:00) America/Tijuana</option>
+
+<option value="-28800_175">(GMT-08:00) America/Vancouver</option>
+<option value="-28800_176">(GMT-08:00) America/Whitehorse</option>
+<option value="-28800_378">(GMT-08:00) Pacific/Pitcairn</option>
+<option value="-25200_77">(GMT-07:00) America/Boise</option>
+<option value="-25200_78">(GMT-07:00) America/Cambridge_Bay</option>
+<option value="-25200_85">(GMT-07:00) America/Chihuahua</option>
+<option value="-25200_91">(GMT-07:00) America/Dawson_Creek</option>
+<option value="-25200_92">(GMT-07:00) America/Denver</option>
+<option value="-25200_95">(GMT-07:00) America/Edmonton</option>
+
+<option value="-25200_110">(GMT-07:00) America/Hermosillo</option>
+<option value="-25200_116">(GMT-07:00) America/Inuvik</option>
+<option value="-25200_130">(GMT-07:00) America/Mazatlan</option>
+<option value="-25200_148">(GMT-07:00) America/Phoenix</option>
+<option value="-25200_162">(GMT-07:00) America/Shiprock</option>
+<option value="-25200_179">(GMT-07:00) America/Yellowknife</option>
+<option value="-21600_74">(GMT-06:00) America/Belize</option>
+<option value="-21600_80">(GMT-06:00) America/Cancun</option>
+<option value="-21600_84">(GMT-06:00) America/Chicago</option>
+
+<option value="-21600_86">(GMT-06:00) America/Costa_Rica</option>
+<option value="-21600_97">(GMT-06:00) America/El_Salvador</option>
+<option value="-21600_105">(GMT-06:00) America/Guatemala</option>
+<option value="-21600_112">(GMT-06:00) America/Indiana/Knox</option>
+<option value="-21600_127">(GMT-06:00) America/Managua</option>
+<option value="-21600_131">(GMT-06:00) America/Menominee</option>
+<option value="-21600_132">(GMT-06:00) America/Merida</option>
+<option value="-21600_133">(GMT-06:00) America/Mexico_City</option>
+<option value="-21600_135">(GMT-06:00) America/Monterrey</option>
+
+<option value="-21600_144">(GMT-06:00) America/North_Dakota/Center</option>
+<option value="-21600_405">(GMT-06:00) America/North_Dakota/New_Salem</option>
+<option value="-21600_153">(GMT-06:00) America/Rainy_River</option>
+<option value="-21600_154">(GMT-06:00) America/Rankin_Inlet</option>
+<option value="-21600_156">(GMT-06:00) America/Regina</option>
+<option value="-21600_168">(GMT-06:00) America/Swift_Current</option>
+<option value="-21600_169">(GMT-06:00) America/Tegucigalpa</option>
+<option value="-21600_177">(GMT-06:00) America/Winnipeg</option>
+<option value="-18000_354">(GMT-06:00) Pacific/Easter</option>
+
+<option value="-21600_360">(GMT-06:00) Pacific/Galapagos</option>
+<option value="-18000_404">(GMT-05:00) America/Atikokan</option>
+<option value="-18000_76">(GMT-05:00) America/Bogota</option>
+<option value="-18000_83">(GMT-05:00) America/Cayman</option>
+<option value="-18000_93">(GMT-05:00) America/Detroit</option>
+<option value="-18000_96">(GMT-05:00) America/Eirunepe</option>
+<option value="-18000_102">(GMT-05:00) America/Grand_Turk</option>
+<option value="-18000_106">(GMT-05:00) America/Guayaquil</option>
+<option value="-18000_109">(GMT-05:00) America/Havana</option>
+
+<option value="-18000_111">(GMT-05:00) America/Indiana/Indianapolis</option>
+<option value="-18000_113">(GMT-05:00) America/Indiana/Marengo</option>
+<option value="-18000_392">(GMT-05:00) America/Indiana/Petersburg</option>
+<option value="-18000_114">(GMT-05:00) America/Indiana/Vevay</option>
+<option value="-18000_393">(GMT-05:00) America/Indiana/Vincennes</option>
+<option value="-18000_117">(GMT-05:00) America/Iqaluit</option>
+<option value="-18000_118">(GMT-05:00) America/Jamaica</option>
+<option value="-18000_120">(GMT-05:00) America/Kentucky/Louisville</option>
+<option value="-18000_121">(GMT-05:00) America/Kentucky/Monticello</option>
+
+<option value="-18000_123">(GMT-05:00) America/Lima</option>
+<option value="-18000_137">(GMT-05:00) America/Montreal</option>
+<option value="-18000_139">(GMT-05:00) America/Nassau</option>
+<option value="-18000_140">(GMT-05:00) America/New_York</option>
+<option value="-18000_141">(GMT-05:00) America/Nipigon</option>
+<option value="-18000_145">(GMT-05:00) America/Panama</option>
+<option value="-18000_146">(GMT-05:00) America/Pangnirtung</option>
+<option value="-18000_149">(GMT-05:00) America/Port-au-Prince</option>
+<option value="-18000_157">(GMT-05:00) America/Rio_Branco</option>
+
+<option value="-18000_171">(GMT-05:00) America/Thunder_Bay</option>
+<option value="-18000_173">(GMT-05:00) America/Toronto</option>
+<option value="-16200_81">(GMT-04:30) America/Caracas</option>
+<option value="-14400_55">(GMT-04:00) America/Anguilla</option>
+<option value="-14400_56">(GMT-04:00) America/Antigua</option>
+<option value="-14400_69">(GMT-04:00) America/Aruba</option>
+<option value="-10800_70">(GMT-04:00) America/Asuncion</option>
+<option value="-14400_72">(GMT-04:00) America/Barbados</option>
+<option value="-14400_403">(GMT-04:00) America/Blanc-Sablon</option>
+
+<option value="-14400_75">(GMT-04:00) America/Boa_Vista</option>
+<option value="-10800_79">(GMT-04:00) America/Campo_Grande</option>
+<option value="-10800_87">(GMT-04:00) America/Cuiaba</option>
+<option value="-14400_88">(GMT-04:00) America/Curacao</option>
+<option value="-14400_94">(GMT-04:00) America/Dominica</option>
+<option value="-14400_99">(GMT-04:00) America/Glace_Bay</option>
+<option value="-14400_101">(GMT-04:00) America/Goose_Bay</option>
+<option value="-14400_103">(GMT-04:00) America/Grenada</option>
+<option value="-14400_104">(GMT-04:00) America/Guadeloupe</option>
+
+<option value="-14400_107">(GMT-04:00) America/Guyana</option>
+<option value="-14400_108">(GMT-04:00) America/Halifax</option>
+<option value="-14400_122">(GMT-04:00) America/La_Paz</option>
+<option value="-14400_128">(GMT-04:00) America/Manaus</option>
+<option value="-14400_129">(GMT-04:00) America/Martinique</option>
+<option value="-14400_394">(GMT-04:00) America/Moncton</option>
+<option value="-14400_138">(GMT-04:00) America/Montserrat</option>
+<option value="-14400_150">(GMT-04:00) America/Port_of_Spain</option>
+<option value="-14400_151">(GMT-04:00) America/Porto_Velho</option>
+
+<option value="-14400_152">(GMT-04:00) America/Puerto_Rico</option>
+<option value="-10800_158">(GMT-04:00) America/Santiago</option>
+<option value="-14400_159">(GMT-04:00) America/Santo_Domingo</option>
+<option value="-14400_164">(GMT-04:00) America/St_Kitts</option>
+<option value="-14400_165">(GMT-04:00) America/St_Lucia</option>
+<option value="-14400_166">(GMT-04:00) America/St_Thomas</option>
+<option value="-14400_167">(GMT-04:00) America/St_Vincent</option>
+<option value="-14400_170">(GMT-04:00) America/Thule</option>
+<option value="-14400_174">(GMT-04:00) America/Tortola</option>
+
+<option value="-10800_185">(GMT-04:00) Antarctica/Palmer</option>
+<option value="-14400_268">(GMT-04:00) Atlantic/Bermuda</option>
+<option value="-10800_277">(GMT-04:00) Atlantic/Stanley</option>
+<option value="-12600_163">(GMT-03:30) America/St_Johns</option>
+<option value="-10800_57">(GMT-03:00) America/Araguaina</option>
+<option value="-7200_58">(GMT-03:00) America/Argentina/Buenos_Aires</option>
+<option value="-7200_59">(GMT-03:00) America/Argentina/Catamarca</option>
+<option value="-7200_61">(GMT-03:00) America/Argentina/Cordoba</option>
+<option value="-7200_62">(GMT-03:00) America/Argentina/Jujuy</option>
+
+<option value="-7200_63">(GMT-03:00) America/Argentina/La_Rioja</option>
+<option value="-7200_64">(GMT-03:00) America/Argentina/Mendoza</option>
+<option value="-7200_65">(GMT-03:00) America/Argentina/Rio_Gallegos</option>
+<option value="-7200_66">(GMT-03:00) America/Argentina/San_Juan</option>
+<option value="-7200_67">(GMT-03:00) America/Argentina/Tucuman</option>
+<option value="-7200_68">(GMT-03:00) America/Argentina/Ushuaia</option>
+<option value="-10800_71">(GMT-03:00) America/Bahia</option>
+<option value="-10800_73">(GMT-03:00) America/Belem</option>
+<option value="-10800_82">(GMT-03:00) America/Cayenne</option>
+
+<option value="-10800_98">(GMT-03:00) America/Fortaleza</option>
+<option value="-10800_100">(GMT-03:00) America/Godthab</option>
+<option value="-10800_126">(GMT-03:00) America/Maceio</option>
+<option value="-10800_134">(GMT-03:00) America/Miquelon</option>
+<option value="-7200_136">(GMT-03:00) America/Montevideo</option>
+<option value="-10800_147">(GMT-03:00) America/Paramaribo</option>
+<option value="-10800_155">(GMT-03:00) America/Recife</option>
+<option value="-7200_160">(GMT-03:00) America/Sao_Paulo</option>
+<option value="-10800_186">(GMT-03:00) Antarctica/Rothera</option>
+
+<option value="-7200_143">(GMT-02:00) America/Noronha</option>
+<option value="-7200_275">(GMT-02:00) Atlantic/South_Georgia</option>
+<option value="-3600_161">(GMT-01:00) America/Scoresbysund</option>
+<option value="-3600_267">(GMT-01:00) Atlantic/Azores</option>
+<option value="-3600_270">(GMT-01:00) Atlantic/Cape_Verde</option>
+<option value="0_1">(GMT) Africa/Abidjan</option>
+<option value="0_2">(GMT) Africa/Accra</option>
+<option value="0_6">(GMT) Africa/Bamako</option>
+<option value="0_8">(GMT) Africa/Banjul</option>
+
+<option value="0_9">(GMT) Africa/Bissau</option>
+<option value="0_14">(GMT) Africa/Casablanca</option>
+<option value="0_16">(GMT) Africa/Conakry</option>
+<option value="0_17">(GMT) Africa/Dakar</option>
+<option value="0_21">(GMT) Africa/El_Aaiun</option>
+<option value="0_22">(GMT) Africa/Freetown</option>
+<option value="0_32">(GMT) Africa/Lome</option>
+<option value="0_41">(GMT) Africa/Monrovia</option>
+<option value="0_45">(GMT) Africa/Nouakchott</option>
+
+<option value="0_46">(GMT) Africa/Ouagadougou</option>
+<option value="0_48">(GMT) Africa/Sao_Tome</option>
+<option value="0_89">(GMT) America/Danmarkshavn</option>
+<option value="0_269">(GMT) Atlantic/Canary</option>
+<option value="0_401">(GMT) Atlantic/Faroe</option>
+<option value="0_273">(GMT) Atlantic/Madeira</option>
+<option value="0_274">(GMT) Atlantic/Reykjavik</option>
+<option value="0_276">(GMT) Atlantic/St_Helena</option>
+<option value="0_300">(GMT) Europe/Dublin</option>
+
+<option value="0_399">(GMT) Europe/Guernsey</option>
+<option value="0_400">(GMT) Europe/Isle_of_Man</option>
+<option value="0_402">(GMT) Europe/Jersey</option>
+<option value="0_306">(GMT) Europe/Lisbon</option>
+<option value="0_308">(GMT) Europe/London</option>
+<option value="3600_4">(GMT+01:00) Africa/Algiers</option>
+<option value="3600_7">(GMT+01:00) Africa/Bangui</option>
+<option value="3600_11">(GMT+01:00) Africa/Brazzaville</option>
+<option value="3600_15">(GMT+01:00) Africa/Ceuta</option>
+
+<option value="3600_20">(GMT+01:00) Africa/Douala</option>
+<option value="3600_29">(GMT+01:00) Africa/Kinshasa</option>
+<option value="3600_30">(GMT+01:00) Africa/Lagos</option>
+<option value="3600_31">(GMT+01:00) Africa/Libreville</option>
+<option value="3600_33">(GMT+01:00) Africa/Luanda</option>
+<option value="3600_36">(GMT+01:00) Africa/Malabo</option>
+<option value="3600_43">(GMT+01:00) Africa/Ndjamena</option>
+<option value="3600_44">(GMT+01:00) Africa/Niamey</option>
+<option value="3600_47">(GMT+01:00) Africa/Porto-Novo</option>
+
+<option value="3600_51">(GMT+01:00) Africa/Tunis</option>
+<option value="7200_52">(GMT+01:00) Africa/Windhoek</option>
+<option value="3600_190">(GMT+01:00) Arctic/Longyearbyen</option>
+<option value="7200_272">(GMT+01:00) Atlantic/Jan_Mayen</option>
+<option value="3600_288">(GMT+01:00) Europe/Amsterdam</option>
+<option value="3600_289">(GMT+01:00) Europe/Andorra</option>
+<option value="3600_292">(GMT+01:00) Europe/Belgrade</option>
+<option value="3600_293">(GMT+01:00) Europe/Berlin</option>
+<option value="3600_294">(GMT+01:00) Europe/Bratislava</option>
+
+<option value="3600_295">(GMT+01:00) Europe/Brussels</option>
+<option value="3600_297">(GMT+01:00) Europe/Budapest</option>
+<option value="3600_299">(GMT+01:00) Europe/Copenhagen</option>
+<option value="3600_301">(GMT+01:00) Europe/Gibraltar</option>
+<option value="3600_307">(GMT+01:00) Europe/Ljubljana</option>
+<option value="3600_309">(GMT+01:00) Europe/Luxembourg</option>
+<option value="3600_310">(GMT+01:00) Europe/Madrid</option>
+<option value="3600_311">(GMT+01:00) Europe/Malta</option>
+<option value="3600_314">(GMT+01:00) Europe/Monaco</option>
+
+<option value="3600_317">(GMT+01:00) Europe/Oslo</option>
+<option value="3600_318">(GMT+01:00) Europe/Paris</option>
+<option value="3600_398">(GMT+01:00) Europe/Podgorica</option>
+<option value="3600_319">(GMT+01:00) Europe/Prague</option>
+<option value="3600_321">(GMT+01:00) Europe/Rome</option>
+<option value="3600_323">(GMT+01:00) Europe/San_Marino</option>
+<option value="3600_324">(GMT+01:00) Europe/Sarajevo</option>
+<option value="3600_326">(GMT+01:00) Europe/Skopje</option>
+<option value="3600_328">(GMT+01:00) Europe/Stockholm</option>
+
+<option value="3600_330">(GMT+01:00) Europe/Tirane</option>
+<option value="3600_332">(GMT+01:00) Europe/Vaduz</option>
+<option value="3600_333">(GMT+01:00) Europe/Vatican</option>
+<option value="3600_334">(GMT+01:00) Europe/Vienna</option>
+<option value="3600_336">(GMT+01:00) Europe/Warsaw</option>
+<option value="3600_337">(GMT+01:00) Europe/Zagreb</option>
+<option value="3600_339">(GMT+01:00) Europe/Zurich</option>
+<option value="7200_10">(GMT+02:00) Africa/Blantyre</option>
+<option value="7200_12">(GMT+02:00) Africa/Bujumbura</option>
+
+<option value="7200_13">(GMT+02:00) Africa/Cairo</option>
+<option value="7200_23">(GMT+02:00) Africa/Gaborone</option>
+<option value="7200_24">(GMT+02:00) Africa/Harare</option>
+<option value="7200_25">(GMT+02:00) Africa/Johannesburg</option>
+<option value="7200_28">(GMT+02:00) Africa/Kigali</option>
+<option value="7200_34">(GMT+02:00) Africa/Lubumbashi</option>
+<option value="7200_35">(GMT+02:00) Africa/Lusaka</option>
+<option value="7200_37">(GMT+02:00) Africa/Maputo</option>
+<option value="7200_38">(GMT+02:00) Africa/Maseru</option>
+
+<option value="7200_39">(GMT+02:00) Africa/Mbabane</option>
+<option value="7200_50">(GMT+02:00) Africa/Tripoli</option>
+<option value="7200_193">(GMT+02:00) Asia/Amman</option>
+<option value="7200_202">(GMT+02:00) Asia/Beirut</option>
+<option value="7200_209">(GMT+02:00) Asia/Damascus</option>
+<option value="7200_214">(GMT+02:00) Asia/Gaza</option>
+<option value="7200_219">(GMT+02:00) Asia/Istanbul</option>
+<option value="7200_222">(GMT+02:00) Asia/Jerusalem</option>
+<option value="7200_237">(GMT+02:00) Asia/Nicosia</option>
+
+<option value="7200_290">(GMT+02:00) Europe/Athens</option>
+<option value="7200_296">(GMT+02:00) Europe/Bucharest</option>
+<option value="7200_298">(GMT+02:00) Europe/Chisinau</option>
+<option value="7200_302">(GMT+02:00) Europe/Helsinki</option>
+<option value="7200_303">(GMT+02:00) Europe/Istanbul</option>
+<option value="7200_304">(GMT+02:00) Europe/Kaliningrad</option>
+<option value="7200_305">(GMT+02:00) Europe/Kiev</option>
+<option value="7200_312">(GMT+02:00) Europe/Mariehamn</option>
+<option value="7200_313">(GMT+02:00) Europe/Minsk</option>
+
+<option value="7200_316">(GMT+02:00) Europe/Nicosia</option>
+<option value="7200_320">(GMT+02:00) Europe/Riga</option>
+<option value="7200_325">(GMT+02:00) Europe/Simferopol</option>
+<option value="7200_327">(GMT+02:00) Europe/Sofia</option>
+<option value="7200_329">(GMT+02:00) Europe/Tallinn</option>
+<option value="7200_331">(GMT+02:00) Europe/Uzhgorod</option>
+<option value="7200_335">(GMT+02:00) Europe/Vilnius</option>
+<option value="7200_338">(GMT+02:00) Europe/Zaporozhye</option>
+<option value="10800_3">(GMT+03:00) Africa/Addis_Ababa</option>
+
+<option value="10800_396">(GMT+03:00) Africa/Asmara</option>
+<option value="10800_18">(GMT+03:00) Africa/Dar_es_Salaam</option>
+<option value="10800_19">(GMT+03:00) Africa/Djibouti</option>
+<option value="10800_26">(GMT+03:00) Africa/Kampala</option>
+<option value="10800_27">(GMT+03:00) Africa/Khartoum</option>
+<option value="10800_40">(GMT+03:00) Africa/Mogadishu</option>
+<option value="10800_42">(GMT+03:00) Africa/Nairobi</option>
+<option value="10800_188">(GMT+03:00) Antarctica/Syowa</option>
+<option value="10800_191">(GMT+03:00) Asia/Aden</option>
+
+<option value="10800_198">(GMT+03:00) Asia/Baghdad</option>
+<option value="10800_199">(GMT+03:00) Asia/Bahrain</option>
+<option value="10800_231">(GMT+03:00) Asia/Kuwait</option>
+<option value="10800_244">(GMT+03:00) Asia/Qatar</option>
+<option value="10800_247">(GMT+03:00) Asia/Riyadh</option>
+<option value="10800_315">(GMT+03:00) Europe/Moscow</option>
+<option value="10800_397">(GMT+03:00) Europe/Volgograd</option>
+<option value="10800_340">(GMT+03:00) Indian/Antananarivo</option>
+<option value="10800_344">(GMT+03:00) Indian/Comoro</option>
+
+<option value="10800_349">(GMT+03:00) Indian/Mayotte</option>
+<option value="12600_257">(GMT+03:30) Asia/Tehran</option>
+<option value="14400_200">(GMT+04:00) Asia/Baku</option>
+<option value="14400_212">(GMT+04:00) Asia/Dubai</option>
+<option value="14400_236">(GMT+04:00) Asia/Muscat</option>
+<option value="14400_256">(GMT+04:00) Asia/Tbilisi</option>
+<option value="14400_266">(GMT+04:00) Asia/Yerevan</option>
+<option value="14400_322">(GMT+04:00) Europe/Samara</option>
+<option value="14400_346">(GMT+04:00) Indian/Mahe</option>
+
+<option value="14400_348">(GMT+04:00) Indian/Mauritius</option>
+<option value="14400_350">(GMT+04:00) Indian/Reunion</option>
+<option value="16200_223">(GMT+04:30) Asia/Kabul</option>
+<option value="18000_195">(GMT+05:00) Asia/Aqtau</option>
+<option value="18000_196">(GMT+05:00) Asia/Aqtobe</option>
+<option value="18000_197">(GMT+05:00) Asia/Ashgabat</option>
+<option value="18000_213">(GMT+05:00) Asia/Dushanbe</option>
+<option value="18000_225">(GMT+05:00) Asia/Karachi</option>
+<option value="18000_240">(GMT+05:00) Asia/Oral</option>
+
+<option value="18000_250">(GMT+05:00) Asia/Samarkand</option>
+<option value="18000_255">(GMT+05:00) Asia/Tashkent</option>
+<option value="18000_265">(GMT+05:00) Asia/Yekaterinburg</option>
+<option value="18000_345">(GMT+05:00) Indian/Kerguelen</option>
+<option value="18000_347">(GMT+05:00) Indian/Maldives</option>
+<option value="19800_205">(GMT+05:30) Asia/Calcutta</option>
+<option value="19800_208">(GMT+05:30) Asia/Colombo</option>
+<option value="20700_227">(GMT+05:45) Asia/Katmandu</option>
+<option value="21600_183">(GMT+06:00) Antarctica/Mawson</option>
+
+<option value="21600_189">(GMT+06:00) Antarctica/Vostok</option>
+<option value="21600_192">(GMT+06:00) Asia/Almaty</option>
+<option value="21600_203">(GMT+06:00) Asia/Bishkek</option>
+<option value="21600_210">(GMT+06:00) Asia/Dhaka</option>
+<option value="21600_238">(GMT+06:00) Asia/Novosibirsk</option>
+<option value="21600_239">(GMT+06:00) Asia/Omsk</option>
+<option value="21600_245">(GMT+06:00) Asia/Qyzylorda</option>
+<option value="21600_258">(GMT+06:00) Asia/Thimphu</option>
+<option value="21600_341">(GMT+06:00) Indian/Chagos</option>
+
+<option value="23400_246">(GMT+06:30) Asia/Rangoon</option>
+<option value="23400_343">(GMT+06:30) Indian/Cocos</option>
+<option value="25200_181">(GMT+07:00) Antarctica/Davis</option>
+<option value="25200_201">(GMT+07:00) Asia/Bangkok</option>
+<option value="25200_217">(GMT+07:00) Asia/Hovd</option>
+<option value="25200_220">(GMT+07:00) Asia/Jakarta</option>
+<option value="25200_228">(GMT+07:00) Asia/Krasnoyarsk</option>
+<option value="25200_241">(GMT+07:00) Asia/Phnom_Penh</option>
+<option value="25200_242">(GMT+07:00) Asia/Pontianak</option>
+
+<option value="25200_248">(GMT+07:00) Asia/Saigon</option>
+<option value="25200_262">(GMT+07:00) Asia/Vientiane</option>
+<option value="25200_342">(GMT+07:00) Indian/Christmas</option>
+<option value="28800_180">(GMT+08:00) Antarctica/Casey</option>
+<option value="28800_204">(GMT+08:00) Asia/Brunei</option>
+<option value="28800_207">(GMT+08:00) Asia/Chongqing</option>
+<option value="28800_215">(GMT+08:00) Asia/Harbin</option>
+<option value="28800_216">(GMT+08:00) Asia/Hong_Kong</option>
+<option value="28800_218">(GMT+08:00) Asia/Irkutsk</option>
+
+<option value="28800_226">(GMT+08:00) Asia/Kashgar</option>
+<option value="28800_229">(GMT+08:00) Asia/Kuala_Lumpur</option>
+<option value="28800_230">(GMT+08:00) Asia/Kuching</option>
+<option value="28800_232">(GMT+08:00) Asia/Macau</option>
+<option value="28800_234">(GMT+08:00) Asia/Makassar</option>
+<option value="28800_235">(GMT+08:00) Asia/Manila</option>
+<option value="28800_252">(GMT+08:00) Asia/Shanghai</option>
+<option value="28800_253">(GMT+08:00) Asia/Singapore</option>
+<option value="28800_254">(GMT+08:00) Asia/Taipei</option>
+
+<option value="28800_260">(GMT+08:00) Asia/Ulaanbaatar</option>
+<option value="28800_261">(GMT+08:00) Asia/Urumqi</option>
+<option value="32400_286">(GMT+08:00) Australia/Perth</option>
+<option value="35100_395">(GMT+08:45) Australia/Eucla</option>
+<option value="32400_206">(GMT+09:00) Asia/Choibalsan</option>
+<option value="32400_211">(GMT+09:00) Asia/Dili</option>
+<option value="32400_221">(GMT+09:00) Asia/Jayapura</option>
+<option value="32400_243">(GMT+09:00) Asia/Pyongyang</option>
+<option value="32400_251">(GMT+09:00) Asia/Seoul</option>
+
+<option value="32400_259">(GMT+09:00) Asia/Tokyo</option>
+<option value="32400_264">(GMT+09:00) Asia/Yakutsk</option>
+<option value="32400_377">(GMT+09:00) Pacific/Palau</option>
+<option value="37800_278">(GMT+09:30) Australia/Adelaide</option>
+<option value="37800_280">(GMT+09:30) Australia/Broken_Hill</option>
+<option value="34200_281">(GMT+09:30) Australia/Darwin</option>
+<option value="36000_182">(GMT+10:00) Antarctica/DumontDUrville</option>
+<option value="36000_249">(GMT+10:00) Asia/Sakhalin</option>
+<option value="36000_263">(GMT+10:00) Asia/Vladivostok</option>
+
+<option value="36000_279">(GMT+10:00) Australia/Brisbane</option>
+<option value="39600_391">(GMT+10:00) Australia/Currie</option>
+<option value="39600_282">(GMT+10:00) Australia/Hobart</option>
+<option value="36000_283">(GMT+10:00) Australia/Lindeman</option>
+<option value="39600_284">(GMT+10:00) Australia/Lord_Howe</option>
+<option value="39600_285">(GMT+10:00) Australia/Melbourne</option>
+<option value="39600_287">(GMT+10:00) Australia/Sydney</option>
+<option value="36000_363">(GMT+10:00) Pacific/Guam</option>
+<option value="36000_380">(GMT+10:00) Pacific/Port_Moresby</option>
+
+<option value="36000_382">(GMT+10:00) Pacific/Saipan</option>
+<option value="36000_386">(GMT+10:00) Pacific/Truk</option>
+<option value="39600_233">(GMT+11:00) Asia/Magadan</option>
+<option value="39600_355">(GMT+11:00) Pacific/Efate</option>
+<option value="39600_362">(GMT+11:00) Pacific/Guadalcanal</option>
+<option value="39600_367">(GMT+11:00) Pacific/Kosrae</option>
+<option value="39600_375">(GMT+11:00) Pacific/Noumea</option>
+<option value="39600_379">(GMT+11:00) Pacific/Ponape</option>
+<option value="41400_374">(GMT+11:30) Pacific/Norfolk</option>
+
+<option value="46800_184">(GMT+12:00) Antarctica/McMurdo</option>
+<option value="46800_187">(GMT+12:00) Antarctica/South_Pole</option>
+<option value="43200_194">(GMT+12:00) Asia/Anadyr</option>
+<option value="43200_224">(GMT+12:00) Asia/Kamchatka</option>
+<option value="46800_352">(GMT+12:00) Pacific/Auckland</option>
+<option value="43200_358">(GMT+12:00) Pacific/Fiji</option>
+<option value="43200_359">(GMT+12:00) Pacific/Funafuti</option>
+<option value="43200_368">(GMT+12:00) Pacific/Kwajalein</option>
+<option value="43200_369">(GMT+12:00) Pacific/Majuro</option>
+
+<option value="43200_372">(GMT+12:00) Pacific/Nauru</option>
+<option value="43200_384">(GMT+12:00) Pacific/Tarawa</option>
+<option value="43200_387">(GMT+12:00) Pacific/Wake</option>
+<option value="43200_388">(GMT+12:00) Pacific/Wallis</option>
+<option value="49500_353">(GMT+12:45) Pacific/Chatham</option>
+<option value="46800_356">(GMT+13:00) Pacific/Enderbury</option>
+<option value="46800_385">(GMT+13:00) Pacific/Tongatapu</option>
+<option value="50400_366">(GMT+14:00) Pacific/Kiritimati</option>
+				</select>
+
+				</td>
+				<td class="status"><span id="timezoneStatus"></span></td>
+			</tr>
+			<tr>
+				<td class="hiddenlabel"><label for="settingssubmit">保存更改</label></td>
+				<td class="field" colspan="2">
+				<input id="settingssubmit" name="settingssave" type="submit" value="保存更改" />
+				<label for="settingscancel" style="display: none;">取消</label>
+
+				<input id="settingscancel" name="settingscancel" type="submit" value="取消" />
+				</td>
+			</tr>
+			<tr>
+				<td class="label" style="padding-top: 10px;"><label for="closeaccount">关闭帐户</label></td>
+				<td class="field" style="padding-top: 10px;"><a id="settings-close-account" href="https://www.rememberthemilk.com/login/delete.rtm" target="_blank">关闭您的帐户</a></td>
+				<td class="status" style="padding-top: 10px;"></td>
+			</tr>			
+			</table>
+
+            </form>
+          </div> <!-- /generalsettingswrap -->
+      </div>
+      <div id="reminders" style="display: none; border: 1px solid #cacaca; border-top: 0;">
+        <form name="notificationform" method="get" action="#">
+        
+        <div style="font-weight: bold; padding-bottom: 10px;">发送每日提醒&hellip;</div>
+        <div style="padding-left: 20px;">
+          <input id="taskdueoncheck" type="checkbox" name="taskdueoncheck" />
+
+          <label for="taskdueoncheck">任务过期的当天</label>
+        </div>
+        <div style="padding-left: 20px; padding-top: 8px;">
+          <input id="taskduespeccheck" type="checkbox" name="taskduespeccheck" />
+          <label for="taskduespeccheck"></label><input id="taskduespec" type="text" name="taskduespec" /><label for="taskduespeccheck">在到期之前</label>        </div>
+        <div id="taskduestartwrap" style="padding-left: 20px; padding-top: 6px; display: none;">
+          <label for="taskduestart">在</label><input id="taskduestart" type="text" name="taskduestart" style="padding-left: 3px; width: 60px;" /><label for="taskduestart">发送每日提醒</label>        </div>
+
+	<div style="font-weight: bold; padding-top: 21px; padding-bottom: 10px;">如果任务有期限，提醒我&hellip;</div>
+        <div style="padding-left: 20px;">
+          <input id="timedueoncheck" type="checkbox" name="timedueoncheck" />
+          <label for="timedueoncheck">当前此任务待完成</label>
+        </div>
+        <div style="padding-left: 20px; padding-top: 8px;">
+          <input id="timeduespeccheck" type="checkbox" name="timeduespeccheck" />
+          <label for="timeduespeccheck">在任务到期之前</label><input id="timeduespec" type="text" name="timeduespec" /><label for="timeduespeccheck"></label>        </div>
+
+        <div style="padding-top: 18px;">
+          <input id="reminder_save" type="submit" name="save" value="保存修改" />
+          <input id="reminder_cancel" type="reset" name="cancel" value="取消" />
+        </div>
+	        
+        <div style="font-weight: bold; padding-top: 21px; padding-bottom: 8px;">我想被提醒，使用&hellip; <img class="detailsaddicon" src="http://static.rememberthemilk.com/img/ico/ico_add_sm.gif" alt="添加详细信息" /><a id="addnotification" class="detailsadd" href=" ">添加详细信息</a></div>
+        <table id="notification"></table>
+       </form>
+
+      </div>
+      <div id="services" style="display: none; border: 1px solid #cacaca; border-top: 0;">
+      	<span id="servicesmsg"><i>您的 Remember The Milk 帐户未获得任何第三方服务权限。</i></span>
+      	<table id="serviceslist" style="display: none;">
+      	<thead>
+      	<tr>
+      		<td style="padding-right: 21px;">服务</td>
+      		<td style="text-align: center;">查看？</td>
+
+      		<td style="text-align: center;">更改？</td>
+      		<td style="text-align: center;">删除？</td>
+      		<td></td>
+      	</tr>
+      	</thead>
+      	<tbody>
+      	<tr>
+      		<td><a href="#">Google Homepage Module</a></td>
+
+      		<td style="text-align: center;"><img src="http://static.rememberthemilk.com/img/ico/ico_check_blu.gif" width="14" height="14" alt="Yes" /></td>
+      		<td style="text-align: center;"><img src="http://static.rememberthemilk.com/img/ico/ico_cross_org.gif" width="14" height="14" alt="No" /></td>
+      		<td style="text-align: center;"><img src="http://static.rememberthemilk.com/img/ico/ico_cross_org.gif" width="14" height="14" alt="No" /></td>
+      		<td><a href="#" title="Remove Permission"><img style="padding-left: 3px;" src="http://static.rememberthemilk.com/img/ico/ico_trash.gif" alt="Remove Permission" title="Remove Permission" height="11" width="11"></a></td>
+	</tr>
+	</tbody>
+      	</table>
+      </div>
+
+      <div id="settings-sync" style="display: none; border: 1px solid #cacaca; border-top: 0;">
+        <div id="settings-sync-wrap" style="padding: 12px 25px 21px">
+          <div id="settings-sync-status">
+            <span id="settings-sync-status-pro" style="display: none;"><b>MilkSync</b> is currently available for: BlackBerry and Windows Mobile. <a target="_blank" href="/services/milksync/">Get it now</a>.</span>
+            <span id="settings-sync-status-free"><a target="_blank" href="/services/milksync/">MilkSync</a> is a super cool way to synchronize your Remember The Milk tasks with other software and devices. It&#039;s currently available for: BlackBerry and Windows Mobile.<br /><br />You&#039;ll need a <b>Pro account</b> to use MilkSync. <a target="_blank" href="/upgrade/">Upgrade now?</a></span>
+
+          </div>
+
+          <div id="settings-sync-form-pro" style="display: none; padding-left: 3px;">
+            <form name="settings-sync-form" method="get" action="#">
+            
+            <div style="font-weight: bold; padding-bottom: 10px;">When synchronizing my tasks...</div>
+            <div style="padding-left: 20px;">
+              <input id="settings-sync-when-all" type="radio" name="settings-sync-when" value="all" />
+              <label for="settings-sync-when-all">Synchronize all lists</label>
+
+            </div>
+            <div style="padding-left: 20px; padding-top: 8px;">
+              <input id="settings-sync-when-some" type="radio" name="settings-sync-when" value="some" />
+              <label for="settings-sync-when-some">Synchronize only lists I&#039;ve specified on the <a onclick="Control.showLists(); return false;" href="#">Lists</a> screen</label>
+            </div>
+            <div style="padding-top: 18px;">
+
+              <input id="settings-sync-save" type="submit" name="save" value="保存修改" />
+              <input id="settings-sync-cancel" type="reset" name="cancel" value="取消" />
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="info" style="display: none; border: 1px solid #cacaca; border-top: 0;">
+
+         <div><b>用户名称</b></div>
+         <span id="infoUsername">charles.xu</span>
+        
+         <div style="padding-top: 10px;"><b>收件邮箱地址</b></div>
+         <span id="infoEmail"><a id="infoEmailAddress" href="mailto:charles.xu+409230@rmilk.com">charles.xu+409230@rmilk.com</a></span>
+        
+         <div style="padding-top: 10px;"><b>导出电邮地址</b></div>
+         <span id="infoImportEmail"><a id="infoImportEmailAddress" href="mailto:charles.xu+409230+import@rmilk.com">charles.xu+409230+import@rmilk.com</a></span>
+
+        
+         <div style="padding-top: 10px;"><b>iCalendar 服务 (所有列表)</b></div>
+         <span id="infoICalendar"><a href="webcal://www.rememberthemilk.com/icalendar/charles.xu/">webcal://www.rememberthemilk.com/icalendar/charles.xu/</a></span>
+         
+         <div style="padding-top: 10px;"><b>iCalendar Events 服务 (所有列表)</b></div>
+         <span id="infoICalendarEvents"><a href="webcal://www.rememberthemilk.com/icalendar/charles.xu/events/">webcal://www.rememberthemilk.com/icalendar/charles.xu/events/</a></span>
+         
+         <div style="padding-top: 10px;"><b>Atom Feed(所有列表)</b></div>
+         <span id="infoAtom"><a href="https://www.rememberthemilk.com/atom/charles.xu/">https://www.rememberthemilk.com/atom/charles.xu/</a></span>
+
+        
+         <div style="padding-top: 10px;"><b>公开的列表</b></div>
+         <span id="infoPublicLists"></span>
+      </div>
+        <!-- /div --> <!-- /settings -->
+    </div>
+    </div> <!-- /listwrap -->
+    </div> <!-- /list -->
+
+    <div id="debug"></div>
+
+    <div class="appfooter">
+        
+    <div id="appfooter-news-list" class="appfooter-news" style="display: ">
+      <div class="appfooter-news-content"><table><tr><td class="icons"><span class="new">NEW</span><span class="ico"><a href="/upgrade/" target="_blank"><img src="http://static.rememberthemilk.com/img/ico/ico_pro.gif" alt="Pro" /></a></span></td><td>Has RTM made you more organized and productive? <a target="_blank" href="/upgrade/">Upgrade to Pro</a> and support RTM.</td></tr></table></div>
+    </div>
+
+        <div class="appfootercontent">
+      <a href="/about/" target="_blank">关于</a> | <a href="http://blog.rememberthemilk.com/" target="_blank">Blog</a> | <a href="/services/" target="_blank">服务</a> | <a href="/forums/" target="_blank">论坛</a> | <a href="/help/" target="_blank">帮助</a>  | <a href="/help/terms.rtm" target="_blank">使用条款</a> | <a href="/help/privacy.rtm" target="_blank">隐私政策</a>
+
+  </div> <!-- /appfootercontent -->
+</div> <!-- /appfooter -->
+
+    </div> <!-- /listbox -->
+    <div id="detailsbox">
+      <div id="details">
+        <div id="detailstabs" style="display: none;">
+                    <script type="text/javascript">
+          detailstab = new Tabs('detailstabs', 'grey');
+          detailstab.init();
+
+          detailstab.addEntry(_T('INTERFACE_TASKS_LIST_DETAILS_LIST'));
+          detailstab.addEntry(_T('INTERFACE_TASKS_LIST_DETAILS_SHARE'));
+          detailstab.addEntry(_T('INTERFACE_TASKS_LIST_DETAILS_PUBLISH'));
+          detailstab.selectTab(_T('INTERFACE_TASKS_LIST_DETAILS_LIST'));
+          </script>
+
+                  </div>
+        <div id="tasktabs" style="display: none;">
+        </div>
+                <div id="contactsdetailstabs" style="display: none;">
+          <script type="text/javascript">
+          contactsdetailstabs = new Tabs('contactsdetailstabs', 'grey');
+          contactsdetailstabs.init();
+
+          contactsdetailstabs.addEntry(_T('INTERFACE_CONTACTS_CONTACT_TAB'));
+          contactsdetailstabs.selectTab(_T('INTERFACE_CONTACTS_CONTACT_TAB'));
+          </script>
+        </div>
+        <div id="settingsdetailstabs" style="display: none;">
+          <script type="text/javascript">
+          settingsdetailstabs = new Tabs('settingsdetailstabs', 'grey');
+          settingsdetailstabs.init();
+
+          settingsdetailstabs.addEntry(_T('INTERFACE_SETTINGS_GENERAL_TAB'));
+          settingsdetailstabs.selectTab(_T('INTERFACE_SETTINGS_GENERAL_TAB'));
+          </script>
+
+        </div>
+                <div id="detailswrap">
+          <div style="margin:0; padding-top:1.4em; clear:both;"></div>
+            <div id="detailsoverflow">
+            <div id="listtoolbox" style="float: right; padding-right: 14px;">
+              <div id="printlist"><img class="noteaddicon" style="padding-left: 1px; padding-right:1px;" src="http://static.rememberthemilk.com/img/ico/ico_print.gif" alt="打印" /><a id="printlista" href=" " target="_blank" class="noteadd" style="font-weight: bold; padding-left: 4px; font-size: 0.95em; vertical-align: bottom;">打印</a></div>
+              <div id="exportlist"><img class="noteaddicon" style="padding-left: 2px; padding-right: 2px" src="http://static.rememberthemilk.com/img/ico/ico_export.gif" alt="iCalendar" /><a href="#" id="icalendarlista" class="noteadd" style="font-weight: bold; padding-left: 4px; font-size: 0.95em; vertical-align: bottom;">iCalendar</a></div>
+              <div id="exportlistevents"><img class="noteaddicon" style="padding-left: 2px; padding-right: 2px" src="http://static.rememberthemilk.com/img/ico/ico_export.gif" alt="iCalendar （事件）" /><a href="#" id="icalendareventslista" class="noteadd" style="font-weight: bold; padding-left: 4px; font-size: 0.95em; vertical-align: bottom;">iCalendar<span style="margin-left: 17px; text-decoration: underline; display: block;">（事件）</span></a></div>
+
+              <div id="atomlist"><img class="noteaddicon" src="http://static.rememberthemilk.com/img/ico/ico_feed_blu.gif" alt="Atom" style="padding-left: 2px;" /><a href="#" target="_blank" id="atomlista" class="noteadd" style="font-weight: bold; padding-left: 5px; font-size: 0.95em; vertical-align: bottom;">Atom</a></div>
+              <div style="visibility: hidden;" id="permalist"><img class="noteaddicon" src="http://static.rememberthemilk.com/img/ico/ico_link.gif" alt="固定链接" /><a href="#" target="_blank" id="permalista" class="noteadd" style="font-weight: bold; padding-left: 4px; font-size: 0.95em; vertical-align: bottom;">固定链接</a></div>
+            </div>
+            <div id="notetoolbox" style="float: right; padding-right: 14px; display: none;">
+              <div id="printlist"><img class="noteaddicon" style="padding-left: 1px; padding-right:1px;" src="http://static.rememberthemilk.com/img/ico/ico_print.gif" alt="打印" /><a id="printnote" href=" " target="_blank" class="noteadd" style="font-weight: bold; padding-left: 4px; font-size: 0.95em; vertical-align: bottom;">打印</a></div>
+            </div>
+            <div id="detailscontent" style="padding-top: 0.4em;">
+
+              <div id="detailstitle" style=""></div>
+              <div id="notesbox" style="display: none;">
+                                <div id="addnote" style="text-align: right;"><img class="noteaddicon" src="http://static.rememberthemilk.com/img/ico/ico_add_sm.gif" alt="添加便笺" /><a href=" " onclick="noteMgr.createNewNote(); return false;" class="noteadd" style="font-weight: bold; padding-left: 4px; font-size: 0.95em; vertical-align: bottom;" title="增加记录 (y)">添加便笺</a></div>
+                                <div class="notexbox" style="clear: right;">
+                  <div id="notes">
+                  </div>
+                </div>
+                <div id="noteclear" style="clear: both;"></div>
+
+                <div id="notedetails">
+              </div> <!-- /notedetails -->
+            </div> <!-- /notesbox -->
+            <div id="listdetailswrap">
+              <div id="listdetails">
+                <div id="listdetailsbox" style="display: none;">
+                  <div id="listsearchfor"><span id="listsearchforval"></span></div>
+                  <div id="listduetoday"><span id="listduetodayval"></span></div>
+
+                  <div id="listduetomorrow"><span id="listduetomorrowval"></span></div>
+                  <div id="listoverdue"><span id="listoverdueval"></span></div>
+                  <div id="listestimatedtime"><span id="listestimatedval"></span></div>
+                  <div id="listcompleted"><span id="listcompletedval"></span></div>
+                </div>
+              </div> <!-- /listdetails -->
+              <div id="listsharedetails" style="display: none;">
+                <div>
+
+                <form id="shareform" action=" " method="get">
+                  <input id="shareprivate" name="sharestate" type="radio" value="private"></input><label style="padding-left: 5px; vertical-align: top;" for="shareprivate" id="shareprivatelabel">列表不共享</label><br />
+                  <input id="sharecontact" name="sharestate" type="radio" value="contact"></input><label style="padding-left: 5px; vertical-align: top;" for="sharecontact" id="sharecontactlabel">对联系人共享</label><br />
+                  <div id="sharecontacts" style="display: none; padding-left: 20px; padding-top: 5px; padding-bottom: 5px;"></div>
+                  <input style="margin-top: 10px; font-size: 0.9em;" id="shareset" name="shareset" type="submit" value="共享"></input>
+                </form>
+                <span id="share-error-message" class="hidden">此列表无法被分享</span>
+
+                </div>
+              </div> <!-- /listsharedetails -->
+              <div id="listpublishdetails" style="display: none;">
+                <div>
+                <form id="publishform" action=" " method="get">
+                  <input id="publishprivate" name="publishedstate" type="radio" value="private"></input><label style="padding-left: 5px; vertical-align: top;" for="publishprivate" id="publishprivatelabel">不发布</label><br />
+                  <input id="publishcontact" name="publishedstate" type="radio" value="contact"></input><label style="padding-left: 5px; vertical-align: top;" for="publishcontact" id="publishcontactlabel">对联系人发布</label><br />
+
+                  <div id="publishcontacts" style="display: none; padding-left: 20px; padding-top: 5px; padding-bottom: 5px;"></div>
+                  <input id="publishpublic" name="publishedstate" type="radio" value="public"></input><label style="padding-left: 5px; vertical-align: top;" for="publishpublic" id="publishpubliclabel">将此列表设为公共列表</label><br />
+                  <input style="margin-top: 10px; font-size: 0.9em;" id="publishset" name="publishset" type="submit" value="发布"></input>
+                </form>
+                <div id="publishurl" style="display: none; padding-top: 10px;"></div>
+                </div>
+              </div> <!-- /listpublishdetails -->
+
+              <div id="listsavedetails" style="display: none;">
+                <div>
+                <form id="saveform" autocomplete="off" action=" " method="get" onsubmit="el('listsaveset').onclick(); return false;">
+                  <label for="savelistname" id="savelistnamelabel">将智能列表存为：</label>
+                  <input style="margin-top: 10px;" id="savelistname" name="savelistname" type="text" value=""></input><br />
+                  <input style="margin-top: 10px; font-size: 0.9em;" id="listsaveset" name="listsaveset" type="submit" value="保存"></input>
+                </form>
+                </div>
+
+              </div>
+
+              <div id="taskdetails" style="display: none;">
+                <div id="detailslist" style="display: none;"></div>
+                <div id="detailsadded" style="display: none;"></div>
+                <div id="detailscompleted" style="display: none;"></div>
+                <div id="detailsdue" style="display: none;"></div>
+                <div id="detailsreoccur" style="display: none;"></div>
+                <div id="detailsduration" style="display: none;"></div>
+
+                <div id="detailstags" style="display: none;"></div>
+                <div id="detailslocation" style="display: none;"></div>
+                <div id="detailsurl" style="display: none;"></div>
+                <div id="detailspostponed" style="display: none;"></div>
+                <div id="detailsshared" style="display: none;"></div>
+                <div id="detailsnotes" style="display: none;"></div>
+              </div> <!-- /taskdetails -->
+              <div id="contactdetails" style="display: none;">
+
+                <div id="contactusername" style="display: none;"></div>
+                <!-- div id="contactemail" style="display: none;"></div -->
+                <!-- div id="contactbday" style="display: none;"></div -->
+                <!-- div id="contactcountry" style="display: none;"></div -->
+                <div id="contactgroups" style="display: none;"></div>
+                <br />
+                <div id="contactsearch"></div>
+              </div> <!-- /contactdetails -->
+
+              <div id="groupdetails" style="display: none;">
+                <div id="groupmembers" style="display: none;"></div>
+              </div> <!-- /groupdetails -->
+              <div id="settingslistdetails" style="display: none; margin-top: -13px;">
+                <div id="settings-lists-details-count"></div>
+                <br />
+                <div id="settingslistincomplete"></div>
+                <div id="settingslistcompleted"></div>
+
+                <br id="settingslistbreak" />
+                <div id="settingslistdescription"></div>
+                <div id="settingslistfilter" style="display: none;"></div>
+                <div id="settingslistpending" style="display: none;">
+                  <form id="listpendingform" action="">
+                    <input id="settingslistaccept" type="submit" value="Accept" />
+                    <input id="settingslistreject" type="submit" value="Reject" />
+                  </form>
+                </div>
+
+              </div> <!-- /settingslistdetails -->
+              <div id="settings-tags-details" style="display: none; margin-top: -13px;">
+                <div id="settings-tags-details-count"></div>
+                <br />
+                <div id="settings-tags-details-incomplete-count"></div>
+                <div id="settings-tags-details-complete-count"></div>
+              </div> <!-- /settings-tags-details -->
+              <div id="settingslocationdetails" style="display: none; margin-top: -13px;">
+
+                <div id="settings-locations-details-count"></div>
+                <br />
+                <div id="settings-locations-details-incomplete-count"></div>
+                <div id="settings-locations-details-complete-count"></div>
+                <br />
+                <div id="settingslocationdescription"></div>
+              </div> <!-- /settingslocationdetails -->
+            </div> <!-- /detailsbox -->
+
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div id="taskcloud_copy" class="taskcloud" style="padding-top: 1.3em; display: none;">
+        <div class="taskcloudbox white_rbroundbox">
+        <div class="white_rbtop"><div><div></div></div></div>
+        <div class="white_rbcontentwrap"><div class="white_rbcontent">
+
+            <div id="taskcloudcontent_copy" class="taskcloudcontent">
+                <span class="listtag" style="font-size: 1.0em;"><a href=" " title="0 tasks">载入中&hellip;</a></span>
+            </div> <!-- /taskcloudcontent -->
+        </div><!-- /white_rbcontent -->
+        </div><!-- /white_rbcontentwrap -->
+        <div class="white_rbbot"><div><div></div></div></div>
+        </div><!-- /white_rbroundbox -->
+      </div> <!-- /taskcloud -->
+
+      <div id="onlinehelpwrap" style="display: none; margin-top: 13px; padding-top: 11px;">
+        <div style="margin:0; clear:both;"></div>
+        <div id="onlinehelpcontent">
+          <img alt="Help" src="http://static.rememberthemilk.com/img/ico/ico_help_blu.gif" style="vertical-align: bottom;" /><span id="onlinehelptext" style="padding-left: 7px;"></span>
+        </div>
+      </div>
+
+      <div id="detailsstatuswrap" style="display: none; margin-top: 13px; padding-top: 11px;">
+        <div style="margin:0; clear:both;"></div>
+
+        <div id="detailsstatuscontent">
+          <img alt="Information" src="http://static.rememberthemilk.com/img/ico/ico_info_blu.gif" style="vertical-align: bottom;" /><span id="detailsstatustext" style="padding-left: 7px;"></span>
+        </div>
+      </div>
+
+      <div id="keywrap" style="display: none; margin-top: 13px; padding-top: 11px;">
+        <div style="margin:0; clear:both;"></div>
+        <div id="keycontent">
+          <div>
+
+            <img alt="关闭提示面板" id="keyclose" src="http://static.rememberthemilk.com/img/ico/ico_cross_gry.gif" style="float: right;" />
+            <img alt="提示" src="http://static.rememberthemilk.com/img/ico/ico_key.gif" style="vertical-align: bottom;" /><span id="keytitle" style="padding-left: 7px; padding-top: 4px; vertical-align: bottom;">提示</span>
+          </div>
+          <div style="padding-top: 1em;">
+            优先级：<div style="padding-top: 0.6em;"><span class="keyprio prio1">1</span> <span class="keyprio prio2">2</span> <span class="keyprio prio3">3</span> <span class="keyprio prioN" style="color: #000000;">无</span></div>
+
+          </div>
+          <div style="padding-top: 0.5em;">
+            今天到期： <b>粗体</b>
+          </div>
+          <div style="padding-top: 0.1em;">
+            过期： <b><u>下划线</u></b>
+          </div>
+
+          <div style="padding-top: 0.9em;">
+		    <a id="key-learn-keyboard" href="/help/answers/basics/keyboard.rtm" target="_blank">学习快捷键</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div> <!-- /appview -->
+<div style="clear: both;"><div></div></div>
+</div> <!-- /content -->
+
+<iframe id="dialog-iframe" style="border: 0pt none ; opacity: 0; filter: alpha(opacity=0); width: 0px; height: 0px;" class="dialog-bg hidden"></iframe>
+<div id="dialog-cover" class="dialog-bg hidden" style="opacity: 0.3; filter: alpha(opacity=30); width: 0px; height: 0px; overflow: hidden;"></div>
+<div id="dialog-frame" class="dialog-frame hidden" style="left: 0px; top: 0px;">
+  <div class="dialog-title">
+    <span id="dialog-title-text"></span>
+    <span></span>
+  </div>
+  <div class="dialog-content">
+    <div id="dialog-content-text">
+
+    </div>
+  </div>
+  <div class="dialog-buttons">
+    <button tabindex="1000" id="dialog-ok" name="ok"></button>
+    <button tabindex="1500" id="dialog-other" name="other" class="hidden"></button>
+    <button tabindex="2000" id="dialog-cancel" name="cancel"></button>
+  </div>
+</div>
+
+<div id="offline-status-box" style="top: 25px; left: -1000px;">
+
+  <div id="offline-status-box-content"></div>
+</div>
+<div id="offline-status-box-shadow"></div>
+
+<script type="text/javascript">
+floatDiv('detailsbox', 0, 0).moveDiv();
+rtmUsername = "charles.xu";
+rtmHostname = "www.rememberthemilk.com";
+rtmMailHost = "rmilk.com";
+rtmTime24 = false;
+rtmInboxEmail = "charles.xu+409230@rmilk.com";
+rtmImportEmail = "charles.xu+409230@rmilk.com";
+rtmShowOverview = true;
+rtmAPIEnabled = true;
+rtmRequestedList = null;
+rtmRequestedTask = null;
+rtmLanguage = "zh-CN";
+rtmIsOffline = false;
+rtmIsPro = false;
+</script>
+<!-- narn.rememberthemilk.com -->
+<script>
+function _CheckFirebug() {
+  var cookie_exists = getCookie("FIREBUG_WARN") !== null ? true : false;
+  if (!cookie_exists && "console" in window && "firebug" in window.console && window.console.firebug.indexOf("1.0") > -1) {
+    var one_week = new Date();
+    one_week.setDate(one_week.getDate() + 7);
+    setCookie('FIREBUG_WARN', 1, one_week, '/', null, null);
+    alert("It looks like you're using Firebug 1.0. Unfortunately, Firebug 1.0 breaks Remember The Milk in mysterious ways. If you experience any problems, please try disabling Firebug for this site. It'll make things much faster, too.");
+  }
+}
+_CheckFirebug();
+</script>
+<script>
+var dispatches = [["in",19],["ts",1212499619918.8],["pr",[false,null,[false]]],["mle"],["ov",["Latest from the blog: Our guest poster shows how to set up a very cool system for Getting Things Done with Remember The Milk. Check out the <a href=\"http:\/\/blog.rememberthemilk.com\/\" target=\"_blank\">blog<\/a> for more news and happenings.","1212148014.50315"]],["tl",29612759],["no",[["433890","email","xuchao0903@gmail.com",true,null,null]]],["ls"],["ld",[["3029577","Inbox",false,true,false,"-1",null,"1208855839.50355","1208855839.50355",0,0,"eJwNyUEOQyEIBcAT2SgiD4*DAmmTv*pvkx6-7iYZpMJVtTWq1CDqM*1QNtyHmOygMDeuviQpqvXWK-Geako9yn7a*4r78fuW63V-ysk5gBLdXVem8erCUJXhME6TkJrAmlInk4yELFNgWyPdlKHjKP7khisA"],["3029578","\u4e2a\u4eba",false,false,false,"0",null,"1208855839.50355","1208855839.50355",0,0,"eJwNylsOQiEMRdERYdpCHwznACWa3C*vJg5f-naytu-wFRHMQsJusfrGSZu*lhpspiQWGq1hW5JQuZK02QMhNct84n3l-fh9y-W6P*VgV4*CoWexbp4*QFObqZBpIqrCY7vPrKLS0aml8eAx0VQJPKLRH8JcKh4"],["3029579","\u5b66\u4e60",false,false,false,"0",null,"1208855839.50355","1208855839.50355",0,0,"eJwNyUkKwzAMAMAXuWixtufIlkILOTUt9PnNbWDscCt3RyQgNPWKI2-qtirR1N3UWTmhlh7UkIwMNHd4OnGP-cz32dfj9x3n6-qMO0MshprwdoDVOR1l5TSYwlGtoQ5saRyLJCM3zhSIhb18Mi*havwDrHsp6Q"],["3029580","\u5de5\u4f5c",false,false,false,"0",null,"1208855839.50355","1208855839.50355",0,0,"eJwNyUkOwjAMAMAXBdlOveQ5jheB1BMFiefT20ijbZpmhkhAqGK52m9KaCaLSxSVpx*QW5oKfOIEOmKZG80a8fT3Wdfj9x3n6-qMOxcbDNHUxa5wgHTazOaIRCNEE3YxJti774ytkgYiMUljIUu11x*90SqK"],["3029581","Sent",false,true,false,"1",null,"1208855839.50355","1208855839.50355",0,0,"eJwNjUsKQjEMAE9UadI0TY6T5oPCW-kUPL7dDQzMrJIVIgKAHWGxhJYdZF8Rk409MS2MemwuzG4DRkdyFRMc2fxp7yvvx*-brtf9aUfqFGgafDI4aUWNvnSSjo3ElkaewKrhnSrDFbBc9*aQXudIjFbxB7nvKuc"]]],["cf",{"remindOn":"t","remindInterval":null,"remindTimeOn":"t","remindTimeInterval":null,"private":1,"defaultList":null,"defaultLocation":null,"lastList":"3029581","postponeTime":null,"legend_setVisible":"f","dateFormat":"1","timeZone":"207","timeZoneOffset":"28800","username":"charles.xu","firstname":"Charles","lastname":"Xu","email":"xuchao0903@gmail.com","birthday":null,"country":"China","showOverview":true,"lastLoad":"1212499608.65735","remindDayStart":"00:00:00","time24":false,"emailSecret":"charles.xu+409230","taskcloud":true,"show_tags":1,"map_last_location":null,"map_last_filter":null,"map_due_date":true,"start_lat":39.928902,"start_lon":116.388298,"start_type":1,"sync_which":0}],["fl",["3029581","(listId:3029581)",0]],["nd",[["13427638","1643525","\u4f7f\u7528\u4f7f\u7528JavaScript\u6846\u67b6","CSS\u5e03\u5c40\n\u7f51\u7ad9\u5bfc\u822a\n\u79bb\u7ebf\u5e94\u7528","1208857068.44946",null,"1208857068.44946"]]],["xd",[1,[13427216,13427638,13427172,13427063,13427854]]],["yd",[0]],["td",[{"list_id":"3029579","id":"19584420","series_id":"13427216","name":"Ruby","date_created":"1208856157.25613","date_completed":null,"date_last_modified":"1208856169.93197","date_due":null,"time_due":false,"date_added":"1208856157.25613","priority":"PN","postponed":"0","estimate":"80 hr","participants":null,"completed":false,"reoccur":null,"url":null,"source":"js"},{"list_id":"3029578","id":"19584907","series_id":"13427638","name":"\u5b66\u4e60RTM\u7684\u8bbe\u8ba1\u98ce\u683c","date_created":"1208857003.74595","date_completed":null,"date_last_modified":"1212160633.93576","date_due":"1209312000","time_due":false,"date_added":"1208857003.74595","priority":"PN","postponed":"0","estimate":null,"participants":null,"completed":false,"reoccur":null,"url":null,"source":"js"},{"list_id":"3029578","id":"19584335","series_id":"13427172","name":"\u641c\u96c691yee\u7684\u7528\u6237\u9700\u6c42","date_created":"1208856069.55786","date_completed":null,"date_last_modified":"1208856958.52129","date_due":"1208793600","time_due":false,"date_added":"1208856069.55786","priority":"PN","postponed":"0","estimate":"8 hr","participants":null,"completed":false,"reoccur":null,"url":null,"source":"js"},{"list_id":"3029578","id":"19584029","series_id":"13427063","name":"\u8bd5\u9a8cRemember The Milk ","date_created":"1208855839.50355","date_completed":"1208856417.29926","date_last_modified":"1208856417.29926","date_due":"1208855820","time_due":true,"date_added":"1208855839.50355","priority":"P1","postponed":"0","estimate":null,"participants":null,"completed":false,"reoccur":null,"url":null,"source":"js"},{"list_id":"3029577","id":"19585133","series_id":"13427854","name":"\u66f4\u6539chishu\u7684url\u80cc\u666f\u989c\u8272","date_created":"1208857497.01216","date_completed":null,"date_last_modified":"1208857497.07813","date_due":"1208880000","time_due":false,"date_added":"1208857497.01216","priority":"PN","postponed":"0","estimate":null,"participants":null,"completed":false,"reoccur":null,"url":null,"source":"js"}]],["gd",[["92401","jj",[{"contact_id":"196496"}]]]],["cd",[["196496","Joe","Bloggs","jjj"]]],["sd",null],["pd",null],["wn",[0,0,0]],["ni"]];
+
+function Load() {
+  Dispatch(dispatches);
+  dispatches = null;
+}
+</script>
+<!--[if IE 6]><script type="text/javascript">
+try {
+  document.execCommand("BackgroundImageCache", false, true);
+} catch(err) {}
+</script><![endif]-->
+<script>
+if (version > 16) {
+/*@cc_on @*/
+/*@if (@_win32)
+    document.write("<script id=__ie_onload defer src=javascript:void(0)><\/script>");
+    var script = document.getElementById("__ie_onload");
+    script.onreadystatechange = function() {
+        if (this.readyState == "complete") {
+            rtmLoad();
+        }
+    };
+/*@end @*/
+    if (/WebKit/i.test(navigator.userAgent)) {
+        var _timer = setInterval(function() {
+            if (/loaded|complete/.test(document.readyState)) {
+                clearInterval(_timer);
+                rtmLoad();
+            }
+        }, 10);
+    } else if (document.addEventListener) {
+        document.addEventListener("DOMContentLoaded", rtmLoad, false);
+    }
+}
+</script>
+</body>
+</html>
+
