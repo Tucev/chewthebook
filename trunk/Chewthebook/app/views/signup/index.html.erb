@@ -233,6 +233,7 @@ return true;}
 <li class="top-nav-help"><a href="/help/">帮助</a></li></ul></div></div> <!-- /topnav -->
 
 
+
 <div id="pageheader">
   <div class="content">
     <h1>注册</h1>
@@ -240,10 +241,8 @@ return true;}
 </div> <!-- /pageheader -->
 
 <div id="container">
-  <div class="content">
-  
+  <div class="content">  
     <div id="signupbox">
-
       <!--br /-->
             <!--div id="signuptab">
         <ul>
@@ -251,13 +250,14 @@ return true;}
         </ul>
       </div--> <!-- /signuptab -->
       <div id="signupwrap">
+            <% if flash[:notice] %><div class="notice"><%= flash[:notice] %></div><% end %>
+            <%= error_messages_for 'post', :header_message => "Please Try Again!", :message => "We had some problems creating the user:" %>
             <% form_tag({:controller => 'signup', :action => 'create'},:id => 'signupform') do %>
       		<!-- form id="signupform" autocomplete="off" method="post" action="https://www.rememberthemilk.com/signup/" -->
 	  		  <table>
 	  		  <tr>
 	  		  	<td class="label"><label id="lfirstname" for="firstname">名字</label></td>
-	  		  	<td class="field"><input id="firstname" name="firstname" type="text" class="textfield" value="" maxlength="100" /></td>
-
+                                <td class="field"><input id="firstname" name="firstname" type="text" class="textfield" value="" maxlength="100" /></td>                                
 	  		  	<td class="status"><span id="firstnameStatus" ></span></td>
 	  		  </tr>
 	  		  <tr>
@@ -266,53 +266,25 @@ return true;}
 	  			<td class="status"><span id="lastnameStatus" ></span></td>
 	  		  </tr>
 	  		  <tr>
-
-	  			<td class="label"><label id="lusername" for="username">用户名称</label></td>
-	  			<td class="field"><input id="username" name="username" type="text" class="textfield" value="" maxlength="50" /></td>
-	  			<td class="status"><span id="usernameStatus" ></span></td>
+	  			<td class="label"><label id="lusername" for="login">用户名称</label></td>
+	  			<!-- td class="field"><input id="username" name="username" type="text" class="textfield" value="" maxlength="50" /></td -->
+                                <td class="field"><input id="login" name="login" type="text" class="textfield" value="" maxlength="50" /></td>	  			<td class="status"><span id="usernameStatus" ></span></td>
 	  		  </tr>
 	  		  <tr>
 	  			<td class="label"><label id="lpassword" for="password">用户密码</label></td>
 	  			<td class="field"><input id="password" name="password" type="password" class="textfield" maxlength="50" value="" /></td>
 	  			<td class="status"><span id="firstPasswordStatus" ></span></td>
-
 	  		  </tr>
 	  		  <tr>
-	  			<td class="label"><label id="lpassword_confirm" for="password_confirm">确认密码</label></td>
-	  			<td class="field"><input id="password_confirm" name="password_confirm" type="password" class="textfield" maxlength="50" value="" /></td>
+	  			<td class="label"><label id="lpassword_confirm" for="password_confirmation">确认密码</label></td>
+	  			<td class="field"><input id="password_confirmation" name="password_confirmation" type="password" class="textfield" maxlength="50" value="" /></td>
 	  			<td class="status"><span id="passwordStatus" ></span></td>
 	  		  </tr>
 	  		  <tr>
 	  			<td class="label"><label id="lemail" for="email">电子邮件</label></td>
-
 	  			<td class="field"><input id="email" name="email" type="text" value="" class="textfield" maxlength="150" /></td>
 	  			<td class="status"><span id="emailStatus" ></span></td>
-	  		  </tr>
-              	  		  <tr>
-	  			<td class="label"><label>哪个更不错</label></td>
-	  			<td class="field" colspan="2" style="vertical-align: top; padding-top: 2px;">
-	  			<table>
-	  			<tbody>
-
-	  			<tr>
-	  				<td style="padding-right: 5px;">
-	  				<input id="dateformat_eu" name="dateformat" type="radio" value="0"  />
-		            <label id="ldateformat_eu" for="dateformat_eu">14/02/07</label>
-	  				</td>
-	  				<td style="padding-left: 5px;">
-	  				<input id="dateformat_am" name="dateformat" type="radio" value="1"  />
-		            <label id="ldateformat_am" for="dateformat_am">02/14/07</label>
-
-	  				</td>
-	  				<td>
-	  				<span id="dateformatStatus" ></span>
-	  				</td>
-	  			</tr>
-	  			</tbody>
-	  			</table>
-	  			</td>
-	  		  </tr>
-
+	  		  </tr>  
 	  		  <tr>
 	  			<td class="label">&nbsp;</td>
 	  			<td class="field" colspan="2">
